@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -18,6 +18,7 @@ import datetime
 
 from client.models.get_shipyard200_response import GetShipyard200Response
 
+
 class TestGetShipyard200Response(unittest.TestCase):
     """GetShipyard200Response unit test stubs"""
 
@@ -29,170 +30,170 @@ class TestGetShipyard200Response(unittest.TestCase):
 
     def make_instance(self, include_optional) -> GetShipyard200Response:
         """Test GetShipyard200Response
-            include_option is a boolean, when False only required
-            params are included, when True both required and
-            optional params are included """
+        include_option is a boolean, when False only required
+        params are included, when True both required and
+        optional params are included"""
         # uncomment below to create an instance of `GetShipyard200Response`
         """
         model = GetShipyard200Response()
         if include_optional:
             return GetShipyard200Response(
                 data = client.models.shipyard.Shipyard(
-                    symbol = '0', 
+                    symbol = '0',
                     ship_types = [
                         client.models.shipyard_ship_types_inner.Shipyard_shipTypes_inner(
                             type = 'SHIP_PROBE', )
-                        ], 
+                        ],
                     transactions = [
                         client.models.shipyard_transaction.ShipyardTransaction(
-                            waypoint_symbol = '0', 
-                            ship_symbol = '', 
-                            ship_type = '', 
-                            price = 0, 
-                            agent_symbol = '', 
+                            waypoint_symbol = '0',
+                            ship_symbol = '',
+                            ship_type = '',
+                            price = 0,
+                            agent_symbol = '',
                             timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
-                        ], 
+                        ],
                     ships = [
                         client.models.shipyard_ship.ShipyardShip(
-                            type = 'SHIP_PROBE', 
-                            name = '', 
-                            description = '', 
-                            supply = 'SCARCE', 
-                            activity = 'WEAK', 
-                            purchase_price = 56, 
+                            type = 'SHIP_PROBE',
+                            name = '',
+                            description = '',
+                            supply = 'SCARCE',
+                            activity = 'WEAK',
+                            purchase_price = 56,
                             frame = client.models.ship_frame.ShipFrame(
-                                symbol = 'FRAME_PROBE', 
-                                name = '', 
-                                description = '', 
-                                condition = 0, 
-                                module_slots = 0, 
-                                mounting_points = 0, 
-                                fuel_capacity = 0, 
+                                symbol = 'FRAME_PROBE',
+                                name = '',
+                                description = '',
+                                condition = 0,
+                                module_slots = 0,
+                                mounting_points = 0,
+                                fuel_capacity = 0,
                                 requirements = client.models.ship_requirements.ShipRequirements(
-                                    power = 56, 
-                                    crew = 56, 
-                                    slots = 56, ), ), 
+                                    power = 56,
+                                    crew = 56,
+                                    slots = 56, ), ),
                             reactor = client.models.ship_reactor.ShipReactor(
-                                symbol = 'REACTOR_SOLAR_I', 
-                                name = '', 
-                                description = '', 
-                                condition = 0, 
-                                power_output = 1, 
+                                symbol = 'REACTOR_SOLAR_I',
+                                name = '',
+                                description = '',
+                                condition = 0,
+                                power_output = 1,
                                 requirements = client.models.ship_requirements.ShipRequirements(
-                                    power = 56, 
-                                    crew = 56, 
-                                    slots = 56, ), ), 
+                                    power = 56,
+                                    crew = 56,
+                                    slots = 56, ), ),
                             engine = client.models.ship_engine.ShipEngine(
-                                symbol = 'ENGINE_IMPULSE_DRIVE_I', 
-                                name = '', 
-                                description = '', 
-                                condition = 0, 
-                                speed = 1, 
-                                requirements = , ), 
+                                symbol = 'ENGINE_IMPULSE_DRIVE_I',
+                                name = '',
+                                description = '',
+                                condition = 0,
+                                speed = 1,
+                                requirements = , ),
                             modules = [
                                 client.models.ship_module.ShipModule(
-                                    symbol = 'MODULE_MINERAL_PROCESSOR_I', 
-                                    capacity = 0, 
-                                    range = 0, 
-                                    name = '', 
-                                    description = '', 
+                                    symbol = 'MODULE_MINERAL_PROCESSOR_I',
+                                    capacity = 0,
+                                    range = 0,
+                                    name = '',
+                                    description = '',
                                     requirements = , )
-                                ], 
+                                ],
                             mounts = [
                                 client.models.ship_mount.ShipMount(
-                                    symbol = 'MOUNT_GAS_SIPHON_I', 
-                                    name = '', 
-                                    description = '', 
-                                    strength = 0, 
+                                    symbol = 'MOUNT_GAS_SIPHON_I',
+                                    name = '',
+                                    description = '',
+                                    strength = 0,
                                     deposits = [
                                         'QUARTZ_SAND'
-                                        ], 
+                                        ],
                                     requirements = , )
-                                ], 
+                                ],
                             crew = client.models.shipyard_ship_crew.ShipyardShip_crew(
-                                required = 56, 
+                                required = 56,
                                 capacity = 56, ), )
-                        ], 
+                        ],
                     modifications_fee = 56, )
             )
         else:
             return GetShipyard200Response(
                 data = client.models.shipyard.Shipyard(
-                    symbol = '0', 
+                    symbol = '0',
                     ship_types = [
                         client.models.shipyard_ship_types_inner.Shipyard_shipTypes_inner(
                             type = 'SHIP_PROBE', )
-                        ], 
+                        ],
                     transactions = [
                         client.models.shipyard_transaction.ShipyardTransaction(
-                            waypoint_symbol = '0', 
-                            ship_symbol = '', 
-                            ship_type = '', 
-                            price = 0, 
-                            agent_symbol = '', 
+                            waypoint_symbol = '0',
+                            ship_symbol = '',
+                            ship_type = '',
+                            price = 0,
+                            agent_symbol = '',
                             timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
-                        ], 
+                        ],
                     ships = [
                         client.models.shipyard_ship.ShipyardShip(
-                            type = 'SHIP_PROBE', 
-                            name = '', 
-                            description = '', 
-                            supply = 'SCARCE', 
-                            activity = 'WEAK', 
-                            purchase_price = 56, 
+                            type = 'SHIP_PROBE',
+                            name = '',
+                            description = '',
+                            supply = 'SCARCE',
+                            activity = 'WEAK',
+                            purchase_price = 56,
                             frame = client.models.ship_frame.ShipFrame(
-                                symbol = 'FRAME_PROBE', 
-                                name = '', 
-                                description = '', 
-                                condition = 0, 
-                                module_slots = 0, 
-                                mounting_points = 0, 
-                                fuel_capacity = 0, 
+                                symbol = 'FRAME_PROBE',
+                                name = '',
+                                description = '',
+                                condition = 0,
+                                module_slots = 0,
+                                mounting_points = 0,
+                                fuel_capacity = 0,
                                 requirements = client.models.ship_requirements.ShipRequirements(
-                                    power = 56, 
-                                    crew = 56, 
-                                    slots = 56, ), ), 
+                                    power = 56,
+                                    crew = 56,
+                                    slots = 56, ), ),
                             reactor = client.models.ship_reactor.ShipReactor(
-                                symbol = 'REACTOR_SOLAR_I', 
-                                name = '', 
-                                description = '', 
-                                condition = 0, 
-                                power_output = 1, 
+                                symbol = 'REACTOR_SOLAR_I',
+                                name = '',
+                                description = '',
+                                condition = 0,
+                                power_output = 1,
                                 requirements = client.models.ship_requirements.ShipRequirements(
-                                    power = 56, 
-                                    crew = 56, 
-                                    slots = 56, ), ), 
+                                    power = 56,
+                                    crew = 56,
+                                    slots = 56, ), ),
                             engine = client.models.ship_engine.ShipEngine(
-                                symbol = 'ENGINE_IMPULSE_DRIVE_I', 
-                                name = '', 
-                                description = '', 
-                                condition = 0, 
-                                speed = 1, 
-                                requirements = , ), 
+                                symbol = 'ENGINE_IMPULSE_DRIVE_I',
+                                name = '',
+                                description = '',
+                                condition = 0,
+                                speed = 1,
+                                requirements = , ),
                             modules = [
                                 client.models.ship_module.ShipModule(
-                                    symbol = 'MODULE_MINERAL_PROCESSOR_I', 
-                                    capacity = 0, 
-                                    range = 0, 
-                                    name = '', 
-                                    description = '', 
+                                    symbol = 'MODULE_MINERAL_PROCESSOR_I',
+                                    capacity = 0,
+                                    range = 0,
+                                    name = '',
+                                    description = '',
                                     requirements = , )
-                                ], 
+                                ],
                             mounts = [
                                 client.models.ship_mount.ShipMount(
-                                    symbol = 'MOUNT_GAS_SIPHON_I', 
-                                    name = '', 
-                                    description = '', 
-                                    strength = 0, 
+                                    symbol = 'MOUNT_GAS_SIPHON_I',
+                                    name = '',
+                                    description = '',
+                                    strength = 0,
                                     deposits = [
                                         'QUARTZ_SAND'
-                                        ], 
+                                        ],
                                     requirements = , )
-                                ], 
+                                ],
                             crew = client.models.shipyard_ship_crew.ShipyardShip_crew(
-                                required = 56, 
+                                required = 56,
                                 capacity = 56, ), )
-                        ], 
+                        ],
                     modifications_fee = 56, ),
         )
         """
@@ -202,5 +203,6 @@ class TestGetShipyard200Response(unittest.TestCase):
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

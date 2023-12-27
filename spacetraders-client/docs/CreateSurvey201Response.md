@@ -1,11 +1,10 @@
 # CreateSurvey201Response
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**CreateSurvey201ResponseData**](CreateSurvey201ResponseData.md) |  | 
+**data** | [**CreateSurvey201ResponseData**](CreateSurvey201ResponseData.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ create_survey201_response_dict = create_survey201_response_instance.to_dict()
 # create an instance of CreateSurvey201Response from a dict
 create_survey201_response_form_dict = create_survey201_response.from_dict(create_survey201_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

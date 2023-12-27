@@ -1,11 +1,10 @@
 # ShipRefine201Response
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ShipRefine201ResponseData**](ShipRefine201ResponseData.md) |  | 
+**data** | [**ShipRefine201ResponseData**](ShipRefine201ResponseData.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ ship_refine201_response_dict = ship_refine201_response_instance.to_dict()
 # create an instance of ShipRefine201Response from a dict
 ship_refine201_response_form_dict = ship_refine201_response.from_dict(ship_refine201_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

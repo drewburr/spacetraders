@@ -6,12 +6,12 @@ Faction details.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**FactionSymbol**](FactionSymbol.md) |  | 
-**name** | **str** | Name of the faction. | 
-**description** | **str** | Description of the faction. | 
-**headquarters** | **str** | The waypoint in which the faction&#39;s HQ is located in. | 
-**traits** | [**List[FactionTrait]**](FactionTrait.md) | List of traits that define this faction. | 
-**is_recruiting** | **bool** | Whether or not the faction is currently recruiting new agents. | 
+**symbol** | [**FactionSymbol**](FactionSymbol.md) |  |
+**name** | **str** | Name of the faction. |
+**description** | **str** | Description of the faction. |
+**headquarters** | **str** | The waypoint in which the faction&#39;s HQ is located in. |
+**traits** | [**List[FactionTrait]**](FactionTrait.md) | List of traits that define this faction. |
+**is_recruiting** | **bool** | Whether or not the faction is currently recruiting new agents. |
 
 ## Example
 
@@ -30,6 +30,5 @@ faction_dict = faction_instance.to_dict()
 # create an instance of Faction from a dict
 faction_form_dict = faction.from_dict(faction_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

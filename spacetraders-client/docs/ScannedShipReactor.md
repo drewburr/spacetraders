@@ -6,7 +6,7 @@ The reactor of the ship.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | The symbol of the reactor. | 
+**symbol** | **str** | The symbol of the reactor. |
 
 ## Example
 
@@ -25,6 +25,5 @@ scanned_ship_reactor_dict = scanned_ship_reactor_instance.to_dict()
 # create an instance of ScannedShipReactor from a dict
 scanned_ship_reactor_form_dict = scanned_ship_reactor.from_dict(scanned_ship_reactor_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

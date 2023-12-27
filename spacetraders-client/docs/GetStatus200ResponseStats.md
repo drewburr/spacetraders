@@ -1,14 +1,13 @@
 # GetStatus200ResponseStats
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**agents** | **int** | Number of registered agents in the game. | 
-**ships** | **int** | Total number of ships in the game. | 
-**systems** | **int** | Total number of systems in the game. | 
-**waypoints** | **int** | Total number of waypoints in the game. | 
+**agents** | **int** | Number of registered agents in the game. |
+**ships** | **int** | Total number of ships in the game. |
+**systems** | **int** | Total number of systems in the game. |
+**waypoints** | **int** | Total number of waypoints in the game. |
 
 ## Example
 
@@ -27,6 +26,5 @@ get_status200_response_stats_dict = get_status200_response_stats_instance.to_dic
 # create an instance of GetStatus200ResponseStats from a dict
 get_status200_response_stats_form_dict = get_status200_response_stats.from_dict(get_status200_response_stats_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

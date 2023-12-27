@@ -6,7 +6,7 @@ The faction that controls the waypoint.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**FactionSymbol**](FactionSymbol.md) |  | 
+**symbol** | [**FactionSymbol**](FactionSymbol.md) |  |
 
 ## Example
 
@@ -25,6 +25,5 @@ waypoint_faction_dict = waypoint_faction_instance.to_dict()
 # create an instance of WaypointFaction from a dict
 waypoint_faction_form_dict = waypoint_faction.from_dict(waypoint_faction_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

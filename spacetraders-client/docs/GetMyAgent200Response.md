@@ -1,11 +1,10 @@
 # GetMyAgent200Response
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Agent**](Agent.md) |  | 
+**data** | [**Agent**](Agent.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ get_my_agent200_response_dict = get_my_agent200_response_instance.to_dict()
 # create an instance of GetMyAgent200Response from a dict
 get_my_agent200_response_form_dict = get_my_agent200_response.from_dict(get_my_agent200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

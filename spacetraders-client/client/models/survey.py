@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -24,27 +24,48 @@ from pydantic import BaseModel, StrictStr, field_validator
 from pydantic import Field
 from typing_extensions import Annotated
 from client.models.survey_deposit import SurveyDeposit
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class Survey(BaseModel):
     """
     A resource survey of a waypoint, detailing a specific extraction location and the types of resources that can be found there.
-    """ # noqa: E501
-    signature: Annotated[str, Field(min_length=1, strict=True)] = Field(description="A unique signature for the location of this survey. This signature is verified when attempting an extraction using this survey.")
-    symbol: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The symbol of the waypoint that this survey is for.")
-    deposits: List[SurveyDeposit] = Field(description="A list of deposits that can be found at this location. A ship will extract one of these deposits when using this survey in an extraction request. If multiple deposits of the same type are present, the chance of extracting that deposit is increased.")
-    expiration: datetime = Field(description="The date and time when the survey expires. After this date and time, the survey will no longer be available for extraction.")
-    size: StrictStr = Field(description="The size of the deposit. This value indicates how much can be extracted from the survey before it is exhausted.")
-    __properties: ClassVar[List[str]] = ["signature", "symbol", "deposits", "expiration", "size"]
+    """  # noqa: E501
 
-    @field_validator('size')
+    signature: Annotated[str, Field(min_length=1, strict=True)] = Field(
+        description="A unique signature for the location of this survey. This signature is verified when attempting an extraction using this survey."
+    )
+    symbol: Annotated[str, Field(min_length=1, strict=True)] = Field(
+        description="The symbol of the waypoint that this survey is for."
+    )
+    deposits: List[SurveyDeposit] = Field(
+        description="A list of deposits that can be found at this location. A ship will extract one of these deposits when using this survey in an extraction request. If multiple deposits of the same type are present, the chance of extracting that deposit is increased."
+    )
+    expiration: datetime = Field(
+        description="The date and time when the survey expires. After this date and time, the survey will no longer be available for extraction."
+    )
+    size: StrictStr = Field(
+        description="The size of the deposit. This value indicates how much can be extracted from the survey before it is exhausted."
+    )
+    __properties: ClassVar[List[str]] = [
+        "signature",
+        "symbol",
+        "deposits",
+        "expiration",
+        "size",
+    ]
+
+    @field_validator("size")
     def size_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('SMALL', 'MODERATE', 'LARGE'):
-            raise ValueError("must be one of enum values ('SMALL', 'MODERATE', 'LARGE')")
+        if value not in ("SMALL", "MODERATE", "LARGE"):
+            raise ValueError(
+                "must be one of enum values ('SMALL', 'MODERATE', 'LARGE')"
+            )
         return value
 
     model_config = {
@@ -52,7 +73,6 @@ class Survey(BaseModel):
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -80,8 +100,7 @@ class Survey(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of each item in deposits (list)
@@ -90,7 +109,7 @@ class Survey(BaseModel):
             for _item in self.deposits:
                 if _item:
                     _items.append(_item.to_dict())
-            _dict['deposits'] = _items
+            _dict["deposits"] = _items
         return _dict
 
     @classmethod
@@ -102,13 +121,17 @@ class Survey(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "signature": obj.get("signature"),
-            "symbol": obj.get("symbol"),
-            "deposits": [SurveyDeposit.from_dict(_item) for _item in obj.get("deposits")] if obj.get("deposits") is not None else None,
-            "expiration": obj.get("expiration"),
-            "size": obj.get("size")
-        })
+        _obj = cls.model_validate(
+            {
+                "signature": obj.get("signature"),
+                "symbol": obj.get("symbol"),
+                "deposits": [
+                    SurveyDeposit.from_dict(_item) for _item in obj.get("deposits")
+                ]
+                if obj.get("deposits") is not None
+                else None,
+                "expiration": obj.get("expiration"),
+                "size": obj.get("size"),
+            }
+        )
         return _obj
-
-

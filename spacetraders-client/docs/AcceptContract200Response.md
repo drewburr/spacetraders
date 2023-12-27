@@ -1,11 +1,10 @@
 # AcceptContract200Response
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**AcceptContract200ResponseData**](AcceptContract200ResponseData.md) |  | 
+**data** | [**AcceptContract200ResponseData**](AcceptContract200ResponseData.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ accept_contract200_response_dict = accept_contract200_response_instance.to_dict(
 # create an instance of AcceptContract200Response from a dict
 accept_contract200_response_form_dict = accept_contract200_response.from_dict(accept_contract200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

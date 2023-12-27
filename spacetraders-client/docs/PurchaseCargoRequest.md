@@ -1,12 +1,11 @@
 # PurchaseCargoRequest
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**TradeSymbol**](TradeSymbol.md) |  | 
-**units** | **int** | Amounts of units to purchase. | 
+**symbol** | [**TradeSymbol**](TradeSymbol.md) |  |
+**units** | **int** | Amounts of units to purchase. |
 
 ## Example
 
@@ -25,6 +24,5 @@ purchase_cargo_request_dict = purchase_cargo_request_instance.to_dict()
 # create an instance of PurchaseCargoRequest from a dict
 purchase_cargo_request_form_dict = purchase_cargo_request.from_dict(purchase_cargo_request_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

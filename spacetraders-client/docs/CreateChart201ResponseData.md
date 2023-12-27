@@ -1,12 +1,11 @@
 # CreateChart201ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chart** | [**Chart**](Chart.md) |  | 
-**waypoint** | [**Waypoint**](Waypoint.md) |  | 
+**chart** | [**Chart**](Chart.md) |  |
+**waypoint** | [**Waypoint**](Waypoint.md) |  |
 
 ## Example
 
@@ -25,6 +24,5 @@ create_chart201_response_data_dict = create_chart201_response_data_instance.to_d
 # create an instance of CreateChart201ResponseData from a dict
 create_chart201_response_data_form_dict = create_chart201_response_data.from_dict(create_chart201_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

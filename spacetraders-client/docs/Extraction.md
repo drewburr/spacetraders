@@ -6,8 +6,8 @@ Extraction details.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ship_symbol** | **str** | Symbol of the ship that executed the extraction. | 
-**var_yield** | [**ExtractionYield**](ExtractionYield.md) |  | 
+**ship_symbol** | **str** | Symbol of the ship that executed the extraction. |
+**var_yield** | [**ExtractionYield**](ExtractionYield.md) |  |
 
 ## Example
 
@@ -26,6 +26,5 @@ extraction_dict = extraction_instance.to_dict()
 # create an instance of Extraction from a dict
 extraction_form_dict = extraction.from_dict(extraction_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -6,9 +6,9 @@ A good that can be traded for other goods or currency.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**TradeSymbol**](TradeSymbol.md) |  | 
-**name** | **str** | The name of the good. | 
-**description** | **str** | The description of the good. | 
+**symbol** | [**TradeSymbol**](TradeSymbol.md) |  |
+**name** | **str** | The name of the good. |
+**description** | **str** | The description of the good. |
 
 ## Example
 
@@ -27,6 +27,5 @@ trade_good_dict = trade_good_instance.to_dict()
 # create an instance of TradeGood from a dict
 trade_good_form_dict = trade_good.from_dict(trade_good_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

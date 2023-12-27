@@ -1,11 +1,10 @@
 # PatchShipNavRequest
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**flight_mode** | [**ShipNavFlightMode**](ShipNavFlightMode.md) |  | [optional] 
+**flight_mode** | [**ShipNavFlightMode**](ShipNavFlightMode.md) |  | [optional]
 
 ## Example
 
@@ -24,6 +23,5 @@ patch_ship_nav_request_dict = patch_ship_nav_request_instance.to_dict()
 # create an instance of PatchShipNavRequest from a dict
 patch_ship_nav_request_form_dict = patch_ship_nav_request.from_dict(patch_ship_nav_request_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

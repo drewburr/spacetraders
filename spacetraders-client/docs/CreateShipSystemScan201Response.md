@@ -1,11 +1,10 @@
 # CreateShipSystemScan201Response
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**CreateShipSystemScan201ResponseData**](CreateShipSystemScan201ResponseData.md) |  | 
+**data** | [**CreateShipSystemScan201ResponseData**](CreateShipSystemScan201ResponseData.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ create_ship_system_scan201_response_dict = create_ship_system_scan201_response_i
 # create an instance of CreateShipSystemScan201Response from a dict
 create_ship_system_scan201_response_form_dict = create_ship_system_scan201_response.from_dict(create_ship_system_scan201_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

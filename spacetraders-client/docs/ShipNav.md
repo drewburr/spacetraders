@@ -6,11 +6,11 @@ The navigation information of the ship.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**system_symbol** | **str** | The symbol of the system. | 
-**waypoint_symbol** | **str** | The symbol of the waypoint. | 
-**route** | [**ShipNavRoute**](ShipNavRoute.md) |  | 
-**status** | [**ShipNavStatus**](ShipNavStatus.md) |  | 
-**flight_mode** | [**ShipNavFlightMode**](ShipNavFlightMode.md) |  | 
+**system_symbol** | **str** | The symbol of the system. |
+**waypoint_symbol** | **str** | The symbol of the waypoint. |
+**route** | [**ShipNavRoute**](ShipNavRoute.md) |  |
+**status** | [**ShipNavStatus**](ShipNavStatus.md) |  |
+**flight_mode** | [**ShipNavFlightMode**](ShipNavFlightMode.md) |  |
 
 ## Example
 
@@ -29,6 +29,5 @@ ship_nav_dict = ship_nav_instance.to_dict()
 # create an instance of ShipNav from a dict
 ship_nav_form_dict = ship_nav.from_dict(ship_nav_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

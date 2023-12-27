@@ -6,12 +6,12 @@ A mount is installed on the exterier of a ship.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | Symbo of this mount. | 
-**name** | **str** | Name of this mount. | 
-**description** | **str** | Description of this mount. | [optional] 
-**strength** | **int** | Mounts that have this value, such as mining lasers, denote how powerful this mount&#39;s capabilities are. | [optional] 
-**deposits** | **List[str]** | Mounts that have this value denote what goods can be produced from using the mount. | [optional] 
-**requirements** | [**ShipRequirements**](ShipRequirements.md) |  | 
+**symbol** | **str** | Symbo of this mount. |
+**name** | **str** | Name of this mount. |
+**description** | **str** | Description of this mount. | [optional]
+**strength** | **int** | Mounts that have this value, such as mining lasers, denote how powerful this mount&#39;s capabilities are. | [optional]
+**deposits** | **List[str]** | Mounts that have this value denote what goods can be produced from using the mount. | [optional]
+**requirements** | [**ShipRequirements**](ShipRequirements.md) |  |
 
 ## Example
 
@@ -30,6 +30,5 @@ ship_mount_dict = ship_mount_instance.to_dict()
 # create an instance of ShipMount from a dict
 ship_mount_form_dict = ship_mount.from_dict(ship_mount_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

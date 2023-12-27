@@ -1,12 +1,11 @@
 # JettisonRequest
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**TradeSymbol**](TradeSymbol.md) |  | 
-**units** | **int** | Amount of units to jettison of this good. | 
+**symbol** | [**TradeSymbol**](TradeSymbol.md) |  |
+**units** | **int** | Amount of units to jettison of this good. |
 
 ## Example
 
@@ -25,6 +24,5 @@ jettison_request_dict = jettison_request_instance.to_dict()
 # create an instance of JettisonRequest from a dict
 jettison_request_form_dict = jettison_request.from_dict(jettison_request_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

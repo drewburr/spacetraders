@@ -1,13 +1,11 @@
 # JumpGate
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | The symbol of the waypoint. | 
-**connections** | **List[str]** | All the gates that are connected to this waypoint. | 
+**symbol** | **str** | The symbol of the waypoint. |
+**connections** | **List[str]** | All the gates that are connected to this waypoint. |
 
 ## Example
 
@@ -26,6 +24,5 @@ jump_gate_dict = jump_gate_instance.to_dict()
 # create an instance of JumpGate from a dict
 jump_gate_form_dict = jump_gate.from_dict(jump_gate_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

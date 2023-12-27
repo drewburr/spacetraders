@@ -1,13 +1,12 @@
 # WaypointModifier
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**WaypointModifierSymbol**](WaypointModifierSymbol.md) |  | 
-**name** | **str** | The name of the trait. | 
-**description** | **str** | A description of the trait. | 
+**symbol** | [**WaypointModifierSymbol**](WaypointModifierSymbol.md) |  |
+**name** | **str** | The name of the trait. |
+**description** | **str** | A description of the trait. |
 
 ## Example
 
@@ -26,6 +25,5 @@ waypoint_modifier_dict = waypoint_modifier_instance.to_dict()
 # create an instance of WaypointModifier from a dict
 waypoint_modifier_form_dict = waypoint_modifier.from_dict(waypoint_modifier_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

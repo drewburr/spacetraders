@@ -1,12 +1,10 @@
 # GetMyShipCargo200Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ShipCargo**](ShipCargo.md) |  | 
+**data** | [**ShipCargo**](ShipCargo.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ get_my_ship_cargo200_response_dict = get_my_ship_cargo200_response_instance.to_d
 # create an instance of GetMyShipCargo200Response from a dict
 get_my_ship_cargo200_response_form_dict = get_my_ship_cargo200_response.from_dict(get_my_ship_cargo200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

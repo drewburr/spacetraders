@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -23,27 +23,38 @@ from typing import Any, ClassVar, Dict, List
 from pydantic import BaseModel
 from pydantic import Field
 from client.models.ship_nav_route_waypoint import ShipNavRouteWaypoint
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class ShipNavRoute(BaseModel):
     """
     The routing information for the ship's most recent transit or current location.
-    """ # noqa: E501
+    """  # noqa: E501
+
     destination: ShipNavRouteWaypoint
     origin: ShipNavRouteWaypoint
-    departure_time: datetime = Field(description="The date time of the ship's departure.", alias="departureTime")
-    arrival: datetime = Field(description="The date time of the ship's arrival. If the ship is in-transit, this is the expected time of arrival.")
-    __properties: ClassVar[List[str]] = ["destination", "origin", "departureTime", "arrival"]
+    departure_time: datetime = Field(
+        description="The date time of the ship's departure.", alias="departureTime"
+    )
+    arrival: datetime = Field(
+        description="The date time of the ship's arrival. If the ship is in-transit, this is the expected time of arrival."
+    )
+    __properties: ClassVar[List[str]] = [
+        "destination",
+        "origin",
+        "departureTime",
+        "arrival",
+    ]
 
     model_config = {
         "populate_by_name": True,
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -71,16 +82,15 @@ class ShipNavRoute(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of destination
         if self.destination:
-            _dict['destination'] = self.destination.to_dict()
+            _dict["destination"] = self.destination.to_dict()
         # override the default output from pydantic by calling `to_dict()` of origin
         if self.origin:
-            _dict['origin'] = self.origin.to_dict()
+            _dict["origin"] = self.origin.to_dict()
         return _dict
 
     @classmethod
@@ -92,12 +102,16 @@ class ShipNavRoute(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "destination": ShipNavRouteWaypoint.from_dict(obj.get("destination")) if obj.get("destination") is not None else None,
-            "origin": ShipNavRouteWaypoint.from_dict(obj.get("origin")) if obj.get("origin") is not None else None,
-            "departureTime": obj.get("departureTime"),
-            "arrival": obj.get("arrival")
-        })
+        _obj = cls.model_validate(
+            {
+                "destination": ShipNavRouteWaypoint.from_dict(obj.get("destination"))
+                if obj.get("destination") is not None
+                else None,
+                "origin": ShipNavRouteWaypoint.from_dict(obj.get("origin"))
+                if obj.get("origin") is not None
+                else None,
+                "departureTime": obj.get("departureTime"),
+                "arrival": obj.get("arrival"),
+            }
+        )
         return _obj
-
-

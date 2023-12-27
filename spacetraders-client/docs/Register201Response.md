@@ -1,11 +1,10 @@
 # Register201Response
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Register201ResponseData**](Register201ResponseData.md) |  | 
+**data** | [**Register201ResponseData**](Register201ResponseData.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ register201_response_dict = register201_response_instance.to_dict()
 # create an instance of Register201Response from a dict
 register201_response_form_dict = register201_response.from_dict(register201_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

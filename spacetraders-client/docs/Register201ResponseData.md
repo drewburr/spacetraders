@@ -1,15 +1,14 @@
 # Register201ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**agent** | [**Agent**](Agent.md) |  | 
-**contract** | [**Contract**](Contract.md) |  | 
-**faction** | [**Faction**](Faction.md) |  | 
-**ship** | [**Ship**](Ship.md) |  | 
-**token** | **str** | A Bearer token for accessing secured API endpoints. | 
+**agent** | [**Agent**](Agent.md) |  |
+**contract** | [**Contract**](Contract.md) |  |
+**faction** | [**Faction**](Faction.md) |  |
+**ship** | [**Ship**](Ship.md) |  |
+**token** | **str** | A Bearer token for accessing secured API endpoints. |
 
 ## Example
 
@@ -28,6 +27,5 @@ register201_response_data_dict = register201_response_data_instance.to_dict()
 # create an instance of Register201ResponseData from a dict
 register201_response_data_form_dict = register201_response_data.from_dict(register201_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

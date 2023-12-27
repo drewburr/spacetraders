@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -24,15 +24,18 @@ from pydantic import BaseModel
 from pydantic import Field
 from client.models.cooldown import Cooldown
 from client.models.scanned_ship import ScannedShip
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class CreateShipShipScan201ResponseData(BaseModel):
     """
     CreateShipShipScan201ResponseData
-    """ # noqa: E501
+    """  # noqa: E501
+
     cooldown: Cooldown
     ships: List[ScannedShip] = Field(description="List of scanned ships.")
     __properties: ClassVar[List[str]] = ["cooldown", "ships"]
@@ -42,7 +45,6 @@ class CreateShipShipScan201ResponseData(BaseModel):
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -70,20 +72,19 @@ class CreateShipShipScan201ResponseData(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of cooldown
         if self.cooldown:
-            _dict['cooldown'] = self.cooldown.to_dict()
+            _dict["cooldown"] = self.cooldown.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in ships (list)
         _items = []
         if self.ships:
             for _item in self.ships:
                 if _item:
                     _items.append(_item.to_dict())
-            _dict['ships'] = _items
+            _dict["ships"] = _items
         return _dict
 
     @classmethod
@@ -95,10 +96,14 @@ class CreateShipShipScan201ResponseData(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "cooldown": Cooldown.from_dict(obj.get("cooldown")) if obj.get("cooldown") is not None else None,
-            "ships": [ScannedShip.from_dict(_item) for _item in obj.get("ships")] if obj.get("ships") is not None else None
-        })
+        _obj = cls.model_validate(
+            {
+                "cooldown": Cooldown.from_dict(obj.get("cooldown"))
+                if obj.get("cooldown") is not None
+                else None,
+                "ships": [ScannedShip.from_dict(_item) for _item in obj.get("ships")]
+                if obj.get("ships") is not None
+                else None,
+            }
+        )
         return _obj
-
-

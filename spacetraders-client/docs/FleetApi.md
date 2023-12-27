@@ -1,6 +1,6 @@
 # client.FleetApi
 
-All URIs are relative to *https://api.spacetraders.io/v2*
+All URIs are relative to *<https://api.spacetraders.io/v2>*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -35,8 +35,8 @@ Method | HTTP request | Description
 [**transfer_cargo**](FleetApi.md#transfer_cargo) | **POST** /my/ships/{shipSymbol}/transfer | Transfer Cargo
 [**warp_ship**](FleetApi.md#warp_ship) | **POST** /my/ships/{shipSymbol}/warp | Warp Ship
 
-
 # **create_chart**
+>
 > CreateChart201Response create_chart(ship_symbol)
 
 Create Chart
@@ -86,14 +86,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->create_chart: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The symbol of the ship. | 
+ **ship_symbol** | **str**| The symbol of the ship. |
 
 ### Return type
 
@@ -105,8 +102,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -117,6 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ship_ship_scan**
+>
 > CreateShipShipScan201Response create_ship_ship_scan(ship_symbol)
 
 Scan Ships
@@ -166,14 +164,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->create_ship_ship_scan: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
+ **ship_symbol** | **str**| The ship symbol. |
 
 ### Return type
 
@@ -185,8 +180,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -197,6 +192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ship_system_scan**
+>
 > CreateShipSystemScan201Response create_ship_system_scan(ship_symbol)
 
 Scan Systems
@@ -246,14 +242,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->create_ship_system_scan: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
+ **ship_symbol** | **str**| The ship symbol. |
 
 ### Return type
 
@@ -265,8 +258,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -277,6 +270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ship_waypoint_scan**
+>
 > CreateShipWaypointScan201Response create_ship_waypoint_scan(ship_symbol)
 
 Scan Waypoints
@@ -326,14 +320,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->create_ship_waypoint_scan: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
+ **ship_symbol** | **str**| The ship symbol. |
 
 ### Return type
 
@@ -345,8 +336,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -357,6 +348,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_survey**
+>
 > CreateSurvey201Response create_survey(ship_symbol)
 
 Create Survey
@@ -406,14 +398,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->create_survey: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The symbol of the ship. | 
+ **ship_symbol** | **str**| The symbol of the ship. |
 
 ### Return type
 
@@ -425,8 +414,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -437,6 +426,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dock_ship**
+>
 > DockShip200Response dock_ship(ship_symbol)
 
 Dock Ship
@@ -486,14 +476,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->dock_ship: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The symbol of the ship. | 
+ **ship_symbol** | **str**| The symbol of the ship. |
 
 ### Return type
 
@@ -505,8 +492,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -517,6 +504,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **extract_resources**
+>
 > ExtractResources201Response extract_resources(ship_symbol, extract_resources_request=extract_resources_request)
 
 Extract Resources
@@ -568,15 +556,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->extract_resources: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
- **extract_resources_request** | [**ExtractResourcesRequest**](ExtractResourcesRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship symbol. |
+ **extract_resources_request** | [**ExtractResourcesRequest**](ExtractResourcesRequest.md)|  | [optional]
 
 ### Return type
 
@@ -588,8 +573,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -600,6 +585,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **extract_resources_with_survey**
+>
 > ExtractResources201Response extract_resources_with_survey(ship_symbol, survey=survey)
 
 Extract Resources with Survey
@@ -651,15 +637,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->extract_resources_with_survey: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
- **survey** | [**Survey**](Survey.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship symbol. |
+ **survey** | [**Survey**](Survey.md)|  | [optional]
 
 ### Return type
 
@@ -671,8 +654,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -683,6 +666,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_mounts**
+>
 > GetMounts200Response get_mounts(ship_symbol)
 
 Get Mounts
@@ -732,14 +716,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->get_mounts: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship&#39;s symbol. | 
+ **ship_symbol** | **str**| The ship&#39;s symbol. |
 
 ### Return type
 
@@ -751,8 +732,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -763,6 +744,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_my_ship**
+>
 > GetMyShip200Response get_my_ship(ship_symbol)
 
 Get Ship
@@ -812,14 +794,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->get_my_ship: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The symbol of the ship. | 
+ **ship_symbol** | **str**| The symbol of the ship. |
 
 ### Return type
 
@@ -831,8 +810,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -843,6 +822,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_my_ship_cargo**
+>
 > GetMyShipCargo200Response get_my_ship_cargo(ship_symbol)
 
 Get Ship Cargo
@@ -892,14 +872,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->get_my_ship_cargo: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The symbol of the ship. | 
+ **ship_symbol** | **str**| The symbol of the ship. |
 
 ### Return type
 
@@ -911,8 +888,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -923,6 +900,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_my_ships**
+>
 > GetMyShips200Response get_my_ships(page=page, limit=limit)
 
 List Ships
@@ -973,10 +951,7 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->get_my_ships: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -993,8 +968,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1005,6 +980,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ship_cooldown**
+>
 > GetShipCooldown200Response get_ship_cooldown(ship_symbol)
 
 Get Ship Cooldown
@@ -1054,14 +1030,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->get_ship_cooldown: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The symbol of the ship. | 
+ **ship_symbol** | **str**| The symbol of the ship. |
 
 ### Return type
 
@@ -1073,8 +1046,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1086,6 +1059,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ship_nav**
+>
 > GetShipNav200Response get_ship_nav(ship_symbol)
 
 Get Ship Nav
@@ -1135,14 +1109,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->get_ship_nav: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
+ **ship_symbol** | **str**| The ship symbol. |
 
 ### Return type
 
@@ -1154,8 +1125,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1166,11 +1137,12 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **install_mount**
+>
 > InstallMount201Response install_mount(ship_symbol, install_mount_request=install_mount_request)
 
 Install Mount
 
-Install a mount on a ship.  In order to install a mount, the ship must be docked and located in a waypoint that has a `Shipyard` trait. The ship also must have the mount to install in its cargo hold.  An installation fee will be deduced by the Shipyard for installing the mount on the ship. 
+Install a mount on a ship.  In order to install a mount, the ship must be docked and located in a waypoint that has a `Shipyard` trait. The ship also must have the mount to install in its cargo hold.  An installation fee will be deduced by the Shipyard for installing the mount on the ship.
 
 ### Example
 
@@ -1217,15 +1189,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->install_mount: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship&#39;s symbol. | 
- **install_mount_request** | [**InstallMountRequest**](InstallMountRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship&#39;s symbol. |
+ **install_mount_request** | [**InstallMountRequest**](InstallMountRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1237,8 +1206,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1249,6 +1218,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **jettison**
+>
 > Jettison200Response jettison(ship_symbol, jettison_request=jettison_request)
 
 Jettison Cargo
@@ -1300,15 +1270,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->jettison: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
- **jettison_request** | [**JettisonRequest**](JettisonRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship symbol. |
+ **jettison_request** | [**JettisonRequest**](JettisonRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1320,8 +1287,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1332,6 +1299,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **jump_ship**
+>
 > JumpShip200Response jump_ship(ship_symbol, jump_ship_request=jump_ship_request)
 
 Jump Ship
@@ -1383,15 +1351,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->jump_ship: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
- **jump_ship_request** | [**JumpShipRequest**](JumpShipRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship symbol. |
+ **jump_ship_request** | [**JumpShipRequest**](JumpShipRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1403,8 +1368,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1415,6 +1380,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **navigate_ship**
+>
 > NavigateShip200Response navigate_ship(ship_symbol, navigate_ship_request=navigate_ship_request)
 
 Navigate Ship
@@ -1466,15 +1432,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->navigate_ship: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
- **navigate_ship_request** | [**NavigateShipRequest**](NavigateShipRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship symbol. |
+ **navigate_ship_request** | [**NavigateShipRequest**](NavigateShipRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1486,8 +1449,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1498,6 +1461,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **negotiate_contract**
+>
 > NegotiateContract200Response negotiate_contract(ship_symbol)
 
 Negotiate Contract
@@ -1547,14 +1511,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->negotiate_contract: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship&#39;s symbol. | 
+ **ship_symbol** | **str**| The ship&#39;s symbol. |
 
 ### Return type
 
@@ -1566,8 +1527,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1578,6 +1539,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **orbit_ship**
+>
 > OrbitShip200Response orbit_ship(ship_symbol)
 
 Orbit Ship
@@ -1627,14 +1589,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->orbit_ship: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The symbol of the ship. | 
+ **ship_symbol** | **str**| The symbol of the ship. |
 
 ### Return type
 
@@ -1646,8 +1605,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1658,6 +1617,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_ship_nav**
+>
 > GetShipNav200Response patch_ship_nav(ship_symbol, patch_ship_nav_request=patch_ship_nav_request)
 
 Patch Ship Nav
@@ -1709,15 +1669,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->patch_ship_nav: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
- **patch_ship_nav_request** | [**PatchShipNavRequest**](PatchShipNavRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship symbol. |
+ **patch_ship_nav_request** | [**PatchShipNavRequest**](PatchShipNavRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1729,8 +1686,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1741,6 +1698,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **purchase_cargo**
+>
 > PurchaseCargo201Response purchase_cargo(ship_symbol, purchase_cargo_request=purchase_cargo_request)
 
 Purchase Cargo
@@ -1792,15 +1750,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->purchase_cargo: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship&#39;s symbol. | 
- **purchase_cargo_request** | [**PurchaseCargoRequest**](PurchaseCargoRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship&#39;s symbol. |
+ **purchase_cargo_request** | [**PurchaseCargoRequest**](PurchaseCargoRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1812,8 +1767,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1824,6 +1779,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **purchase_ship**
+>
 > PurchaseShip201Response purchase_ship(purchase_ship_request=purchase_ship_request)
 
 Purchase Ship
@@ -1874,14 +1830,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->purchase_ship: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **purchase_ship_request** | [**PurchaseShipRequest**](PurchaseShipRequest.md)|  | [optional] 
+ **purchase_ship_request** | [**PurchaseShipRequest**](PurchaseShipRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1893,8 +1846,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1905,6 +1858,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **refuel_ship**
+>
 > RefuelShip200Response refuel_ship(ship_symbol, refuel_ship_request=refuel_ship_request)
 
 Refuel Ship
@@ -1956,15 +1910,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->refuel_ship: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
- **refuel_ship_request** | [**RefuelShipRequest**](RefuelShipRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship symbol. |
+ **refuel_ship_request** | [**RefuelShipRequest**](RefuelShipRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1976,8 +1927,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -1988,6 +1939,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_mount**
+>
 > RemoveMount201Response remove_mount(ship_symbol, remove_mount_request=remove_mount_request)
 
 Remove Mount
@@ -2039,15 +1991,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->remove_mount: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship&#39;s symbol. | 
- **remove_mount_request** | [**RemoveMountRequest**](RemoveMountRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship&#39;s symbol. |
+ **remove_mount_request** | [**RemoveMountRequest**](RemoveMountRequest.md)|  | [optional]
 
 ### Return type
 
@@ -2059,8 +2008,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -2071,6 +2020,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sell_cargo**
+>
 > SellCargo201Response sell_cargo(ship_symbol, sell_cargo_request=sell_cargo_request)
 
 Sell Cargo
@@ -2122,15 +2072,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->sell_cargo: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| Symbol of a ship. | 
- **sell_cargo_request** | [**SellCargoRequest**](SellCargoRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| Symbol of a ship. |
+ **sell_cargo_request** | [**SellCargoRequest**](SellCargoRequest.md)|  | [optional]
 
 ### Return type
 
@@ -2142,8 +2089,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -2154,6 +2101,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ship_refine**
+>
 > ShipRefine201Response ship_refine(ship_symbol, ship_refine_request=ship_refine_request)
 
 Ship Refine
@@ -2205,15 +2153,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->ship_refine: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The symbol of the ship. | 
- **ship_refine_request** | [**ShipRefineRequest**](ShipRefineRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The symbol of the ship. |
+ **ship_refine_request** | [**ShipRefineRequest**](ShipRefineRequest.md)|  | [optional]
 
 ### Return type
 
@@ -2225,8 +2170,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -2237,6 +2182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **siphon_resources**
+>
 > SiphonResources201Response siphon_resources(ship_symbol)
 
 Siphon Resources
@@ -2286,14 +2232,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->siphon_resources: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
+ **ship_symbol** | **str**| The ship symbol. |
 
 ### Return type
 
@@ -2305,8 +2248,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -2317,6 +2260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **transfer_cargo**
+>
 > TransferCargo200Response transfer_cargo(ship_symbol, transfer_cargo_request=transfer_cargo_request)
 
 Transfer Cargo
@@ -2368,15 +2312,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->transfer_cargo: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The transferring ship&#39;s symbol. | 
- **transfer_cargo_request** | [**TransferCargoRequest**](TransferCargoRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The transferring ship&#39;s symbol. |
+ **transfer_cargo_request** | [**TransferCargoRequest**](TransferCargoRequest.md)|  | [optional]
 
 ### Return type
 
@@ -2388,8 +2329,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -2400,6 +2341,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **warp_ship**
+>
 > NavigateShip200Response warp_ship(ship_symbol, navigate_ship_request=navigate_ship_request)
 
 Warp Ship
@@ -2451,15 +2393,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FleetApi->warp_ship: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ship_symbol** | **str**| The ship symbol. | 
- **navigate_ship_request** | [**NavigateShipRequest**](NavigateShipRequest.md)|  | [optional] 
+ **ship_symbol** | **str**| The ship symbol. |
+ **navigate_ship_request** | [**NavigateShipRequest**](NavigateShipRequest.md)|  | [optional]
 
 ### Return type
 
@@ -2471,8 +2410,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -2481,4 +2420,3 @@ Name | Type | Description  | Notes
 **200** | The successful transit information including the route details and changes to ship fuel. The route includes the expected time of arrival. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

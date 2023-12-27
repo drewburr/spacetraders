@@ -1,12 +1,11 @@
 # CreateSurvey201ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cooldown** | [**Cooldown**](Cooldown.md) |  | 
-**surveys** | [**List[Survey]**](Survey.md) | Surveys created by this action. | 
+**cooldown** | [**Cooldown**](Cooldown.md) |  |
+**surveys** | [**List[Survey]**](Survey.md) | Surveys created by this action. |
 
 ## Example
 
@@ -25,6 +24,5 @@ create_survey201_response_data_dict = create_survey201_response_data_instance.to
 # create an instance of CreateSurvey201ResponseData from a dict
 create_survey201_response_data_form_dict = create_survey201_response_data.from_dict(create_survey201_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -6,9 +6,9 @@ The terms to fulfill the contract.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deadline** | **datetime** | The deadline for the contract. | 
-**payment** | [**ContractPayment**](ContractPayment.md) |  | 
-**deliver** | [**List[ContractDeliverGood]**](ContractDeliverGood.md) | The cargo that needs to be delivered to fulfill the contract. | [optional] 
+**deadline** | **datetime** | The deadline for the contract. |
+**payment** | [**ContractPayment**](ContractPayment.md) |  |
+**deliver** | [**List[ContractDeliverGood]**](ContractDeliverGood.md) | The cargo that needs to be delivered to fulfill the contract. | [optional]
 
 ## Example
 
@@ -27,6 +27,5 @@ contract_terms_dict = contract_terms_instance.to_dict()
 # create an instance of ContractTerms from a dict
 contract_terms_form_dict = contract_terms.from_dict(contract_terms_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

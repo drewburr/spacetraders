@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -59,7 +59,6 @@ class SystemsApi:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
-
     @validate_call
     def get_construction(
         self,
@@ -69,9 +68,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -106,7 +104,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_construction_serialize(
             system_symbol=system_symbol,
@@ -114,22 +112,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetConstruction200Response",
+            "200": "GetConstruction200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     def get_construction_with_http_info(
@@ -140,9 +136,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -177,7 +172,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_construction_serialize(
             system_symbol=system_symbol,
@@ -185,22 +180,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetConstruction200Response",
+            "200": "GetConstruction200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
-
 
     @validate_call
     def get_construction_without_preload_content(
@@ -211,9 +204,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -248,7 +240,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_construction_serialize(
             system_symbol=system_symbol,
@@ -256,18 +248,16 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetConstruction200Response",
+            "200": "GetConstruction200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_construction_serialize(
         self,
@@ -278,11 +268,9 @@ class SystemsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -293,31 +281,25 @@ class SystemsApi:
 
         # process the path parameters
         if system_symbol is not None:
-            _path_params['systemSymbol'] = system_symbol
+            _path_params["systemSymbol"] = system_symbol
         if waypoint_symbol is not None:
-            _path_params['waypointSymbol'] = waypoint_symbol
+            _path_params["waypointSymbol"] = waypoint_symbol
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/systems/{systemSymbol}/waypoints/{waypointSymbol}/construction',
+            method="GET",
+            resource_path="/systems/{systemSymbol}/waypoints/{waypointSymbol}/construction",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -327,11 +309,8 @@ class SystemsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def get_jump_gate(
@@ -342,9 +321,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -353,7 +331,7 @@ class SystemsApi:
     ) -> GetJumpGate200Response:
         """Get Jump Gate
 
-        Get jump gate details for a waypoint. Requires a waypoint of type `JUMP_GATE` to use.  Waypoints connected to this jump gate can be 
+        Get jump gate details for a waypoint. Requires a waypoint of type `JUMP_GATE` to use.  Waypoints connected to this jump gate can be
 
         :param system_symbol: The system symbol (required)
         :type system_symbol: str
@@ -379,7 +357,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_jump_gate_serialize(
             system_symbol=system_symbol,
@@ -387,22 +365,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetJumpGate200Response",
+            "200": "GetJumpGate200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     def get_jump_gate_with_http_info(
@@ -413,9 +389,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -424,7 +399,7 @@ class SystemsApi:
     ) -> ApiResponse[GetJumpGate200Response]:
         """Get Jump Gate
 
-        Get jump gate details for a waypoint. Requires a waypoint of type `JUMP_GATE` to use.  Waypoints connected to this jump gate can be 
+        Get jump gate details for a waypoint. Requires a waypoint of type `JUMP_GATE` to use.  Waypoints connected to this jump gate can be
 
         :param system_symbol: The system symbol (required)
         :type system_symbol: str
@@ -450,7 +425,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_jump_gate_serialize(
             system_symbol=system_symbol,
@@ -458,22 +433,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetJumpGate200Response",
+            "200": "GetJumpGate200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
-
 
     @validate_call
     def get_jump_gate_without_preload_content(
@@ -484,9 +457,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -495,7 +467,7 @@ class SystemsApi:
     ) -> RESTResponseType:
         """Get Jump Gate
 
-        Get jump gate details for a waypoint. Requires a waypoint of type `JUMP_GATE` to use.  Waypoints connected to this jump gate can be 
+        Get jump gate details for a waypoint. Requires a waypoint of type `JUMP_GATE` to use.  Waypoints connected to this jump gate can be
 
         :param system_symbol: The system symbol (required)
         :type system_symbol: str
@@ -521,7 +493,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_jump_gate_serialize(
             system_symbol=system_symbol,
@@ -529,18 +501,16 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetJumpGate200Response",
+            "200": "GetJumpGate200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_jump_gate_serialize(
         self,
@@ -551,11 +521,9 @@ class SystemsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -566,31 +534,25 @@ class SystemsApi:
 
         # process the path parameters
         if system_symbol is not None:
-            _path_params['systemSymbol'] = system_symbol
+            _path_params["systemSymbol"] = system_symbol
         if waypoint_symbol is not None:
-            _path_params['waypointSymbol'] = waypoint_symbol
+            _path_params["waypointSymbol"] = waypoint_symbol
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/systems/{systemSymbol}/waypoints/{waypointSymbol}/jump-gate',
+            method="GET",
+            resource_path="/systems/{systemSymbol}/waypoints/{waypointSymbol}/jump-gate",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -600,11 +562,8 @@ class SystemsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def get_market(
@@ -615,9 +574,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -652,7 +610,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_market_serialize(
             system_symbol=system_symbol,
@@ -660,22 +618,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetMarket200Response",
+            "200": "GetMarket200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     def get_market_with_http_info(
@@ -686,9 +642,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -723,7 +678,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_market_serialize(
             system_symbol=system_symbol,
@@ -731,22 +686,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetMarket200Response",
+            "200": "GetMarket200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
-
 
     @validate_call
     def get_market_without_preload_content(
@@ -757,9 +710,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -794,7 +746,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_market_serialize(
             system_symbol=system_symbol,
@@ -802,18 +754,16 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetMarket200Response",
+            "200": "GetMarket200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_market_serialize(
         self,
@@ -824,11 +774,9 @@ class SystemsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -839,31 +787,25 @@ class SystemsApi:
 
         # process the path parameters
         if system_symbol is not None:
-            _path_params['systemSymbol'] = system_symbol
+            _path_params["systemSymbol"] = system_symbol
         if waypoint_symbol is not None:
-            _path_params['waypointSymbol'] = waypoint_symbol
+            _path_params["waypointSymbol"] = waypoint_symbol
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/systems/{systemSymbol}/waypoints/{waypointSymbol}/market',
+            method="GET",
+            resource_path="/systems/{systemSymbol}/waypoints/{waypointSymbol}/market",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -873,11 +815,8 @@ class SystemsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def get_shipyard(
@@ -888,9 +827,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -925,7 +863,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_shipyard_serialize(
             system_symbol=system_symbol,
@@ -933,22 +871,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetShipyard200Response",
+            "200": "GetShipyard200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     def get_shipyard_with_http_info(
@@ -959,9 +895,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -996,7 +931,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_shipyard_serialize(
             system_symbol=system_symbol,
@@ -1004,22 +939,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetShipyard200Response",
+            "200": "GetShipyard200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
-
 
     @validate_call
     def get_shipyard_without_preload_content(
@@ -1030,9 +963,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1067,7 +999,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_shipyard_serialize(
             system_symbol=system_symbol,
@@ -1075,18 +1007,16 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetShipyard200Response",
+            "200": "GetShipyard200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_shipyard_serialize(
         self,
@@ -1097,11 +1027,9 @@ class SystemsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1112,31 +1040,25 @@ class SystemsApi:
 
         # process the path parameters
         if system_symbol is not None:
-            _path_params['systemSymbol'] = system_symbol
+            _path_params["systemSymbol"] = system_symbol
         if waypoint_symbol is not None:
-            _path_params['waypointSymbol'] = waypoint_symbol
+            _path_params["waypointSymbol"] = waypoint_symbol
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/systems/{systemSymbol}/waypoints/{waypointSymbol}/shipyard',
+            method="GET",
+            resource_path="/systems/{systemSymbol}/waypoints/{waypointSymbol}/shipyard",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1146,11 +1068,8 @@ class SystemsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def get_system(
@@ -1160,9 +1079,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1195,29 +1113,27 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_system_serialize(
             system_symbol=system_symbol,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetSystem200Response",
+            "200": "GetSystem200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     def get_system_with_http_info(
@@ -1227,9 +1143,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1262,29 +1177,27 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_system_serialize(
             system_symbol=system_symbol,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetSystem200Response",
+            "200": "GetSystem200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
-
 
     @validate_call
     def get_system_without_preload_content(
@@ -1294,9 +1207,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1329,25 +1241,23 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_system_serialize(
             system_symbol=system_symbol,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetSystem200Response",
+            "200": "GetSystem200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_system_serialize(
         self,
@@ -1357,11 +1267,9 @@ class SystemsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1372,29 +1280,23 @@ class SystemsApi:
 
         # process the path parameters
         if system_symbol is not None:
-            _path_params['systemSymbol'] = system_symbol
+            _path_params["systemSymbol"] = system_symbol
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/systems/{systemSymbol}',
+            method="GET",
+            resource_path="/systems/{systemSymbol}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1404,27 +1306,33 @@ class SystemsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def get_system_waypoints(
         self,
         system_symbol: Annotated[StrictStr, Field(description="The system symbol")],
-        page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="What entry offset to request")] = None,
-        limit: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="How many entries to return per page")] = None,
-        type: Annotated[Optional[WaypointType], Field(description="Filter waypoints by type.")] = None,
-        traits: Annotated[Optional[Any], Field(description="Filter waypoints by one or more traits.")] = None,
+        page: Annotated[
+            Optional[Annotated[int, Field(strict=True, ge=1)]],
+            Field(description="What entry offset to request"),
+        ] = None,
+        limit: Annotated[
+            Optional[Annotated[int, Field(le=20, strict=True, ge=1)]],
+            Field(description="How many entries to return per page"),
+        ] = None,
+        type: Annotated[
+            Optional[WaypointType], Field(description="Filter waypoints by type.")
+        ] = None,
+        traits: Annotated[
+            Optional[Any], Field(description="Filter waypoints by one or more traits.")
+        ] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1465,7 +1373,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_system_waypoints_serialize(
             system_symbol=system_symbol,
@@ -1476,15 +1384,14 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetSystemWaypoints200Response",
+            "200": "GetSystemWaypoints200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -1492,22 +1399,30 @@ class SystemsApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     def get_system_waypoints_with_http_info(
         self,
         system_symbol: Annotated[StrictStr, Field(description="The system symbol")],
-        page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="What entry offset to request")] = None,
-        limit: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="How many entries to return per page")] = None,
-        type: Annotated[Optional[WaypointType], Field(description="Filter waypoints by type.")] = None,
-        traits: Annotated[Optional[Any], Field(description="Filter waypoints by one or more traits.")] = None,
+        page: Annotated[
+            Optional[Annotated[int, Field(strict=True, ge=1)]],
+            Field(description="What entry offset to request"),
+        ] = None,
+        limit: Annotated[
+            Optional[Annotated[int, Field(le=20, strict=True, ge=1)]],
+            Field(description="How many entries to return per page"),
+        ] = None,
+        type: Annotated[
+            Optional[WaypointType], Field(description="Filter waypoints by type.")
+        ] = None,
+        traits: Annotated[
+            Optional[Any], Field(description="Filter waypoints by one or more traits.")
+        ] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1548,7 +1463,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_system_waypoints_serialize(
             system_symbol=system_symbol,
@@ -1559,15 +1474,14 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetSystemWaypoints200Response",
+            "200": "GetSystemWaypoints200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -1575,22 +1489,30 @@ class SystemsApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     def get_system_waypoints_without_preload_content(
         self,
         system_symbol: Annotated[StrictStr, Field(description="The system symbol")],
-        page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="What entry offset to request")] = None,
-        limit: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="How many entries to return per page")] = None,
-        type: Annotated[Optional[WaypointType], Field(description="Filter waypoints by type.")] = None,
-        traits: Annotated[Optional[Any], Field(description="Filter waypoints by one or more traits.")] = None,
+        page: Annotated[
+            Optional[Annotated[int, Field(strict=True, ge=1)]],
+            Field(description="What entry offset to request"),
+        ] = None,
+        limit: Annotated[
+            Optional[Annotated[int, Field(le=20, strict=True, ge=1)]],
+            Field(description="How many entries to return per page"),
+        ] = None,
+        type: Annotated[
+            Optional[WaypointType], Field(description="Filter waypoints by type.")
+        ] = None,
+        traits: Annotated[
+            Optional[Any], Field(description="Filter waypoints by one or more traits.")
+        ] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1631,7 +1553,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_system_waypoints_serialize(
             system_symbol=system_symbol,
@@ -1642,18 +1564,16 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetSystemWaypoints200Response",
+            "200": "GetSystemWaypoints200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_system_waypoints_serialize(
         self,
@@ -1667,11 +1587,9 @@ class SystemsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1682,45 +1600,35 @@ class SystemsApi:
 
         # process the path parameters
         if system_symbol is not None:
-            _path_params['systemSymbol'] = system_symbol
+            _path_params["systemSymbol"] = system_symbol
         # process the query parameters
         if page is not None:
-            
-            _query_params.append(('page', page))
-            
+            _query_params.append(("page", page))
+
         if limit is not None:
-            
-            _query_params.append(('limit', limit))
-            
+            _query_params.append(("limit", limit))
+
         if type is not None:
-            
-            _query_params.append(('type', type.value))
-            
+            _query_params.append(("type", type.value))
+
         if traits is not None:
-            
-            _query_params.append(('traits', traits))
-            
+            _query_params.append(("traits", traits))
+
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/systems/{systemSymbol}/waypoints',
+            method="GET",
+            resource_path="/systems/{systemSymbol}/waypoints",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1730,24 +1638,26 @@ class SystemsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def get_systems(
         self,
-        page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="What entry offset to request")] = None,
-        limit: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="How many entries to return per page")] = None,
+        page: Annotated[
+            Optional[Annotated[int, Field(strict=True, ge=1)]],
+            Field(description="What entry offset to request"),
+        ] = None,
+        limit: Annotated[
+            Optional[Annotated[int, Field(le=20, strict=True, ge=1)]],
+            Field(description="How many entries to return per page"),
+        ] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1782,7 +1692,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_systems_serialize(
             page=page,
@@ -1790,15 +1700,14 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetSystems200Response",
+            "200": "GetSystems200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -1806,19 +1715,23 @@ class SystemsApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     def get_systems_with_http_info(
         self,
-        page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="What entry offset to request")] = None,
-        limit: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="How many entries to return per page")] = None,
+        page: Annotated[
+            Optional[Annotated[int, Field(strict=True, ge=1)]],
+            Field(description="What entry offset to request"),
+        ] = None,
+        limit: Annotated[
+            Optional[Annotated[int, Field(le=20, strict=True, ge=1)]],
+            Field(description="How many entries to return per page"),
+        ] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1853,7 +1766,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_systems_serialize(
             page=page,
@@ -1861,15 +1774,14 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetSystems200Response",
+            "200": "GetSystems200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -1877,19 +1789,23 @@ class SystemsApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     def get_systems_without_preload_content(
         self,
-        page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="What entry offset to request")] = None,
-        limit: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="How many entries to return per page")] = None,
+        page: Annotated[
+            Optional[Annotated[int, Field(strict=True, ge=1)]],
+            Field(description="What entry offset to request"),
+        ] = None,
+        limit: Annotated[
+            Optional[Annotated[int, Field(le=20, strict=True, ge=1)]],
+            Field(description="How many entries to return per page"),
+        ] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1924,7 +1840,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_systems_serialize(
             page=page,
@@ -1932,18 +1848,16 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetSystems200Response",
+            "200": "GetSystems200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_systems_serialize(
         self,
@@ -1954,11 +1868,9 @@ class SystemsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1970,34 +1882,26 @@ class SystemsApi:
         # process the path parameters
         # process the query parameters
         if page is not None:
-            
-            _query_params.append(('page', page))
-            
+            _query_params.append(("page", page))
+
         if limit is not None:
-            
-            _query_params.append(('limit', limit))
-            
+            _query_params.append(("limit", limit))
+
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/systems',
+            method="GET",
+            resource_path="/systems",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2007,11 +1911,8 @@ class SystemsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def get_waypoint(
@@ -2022,9 +1923,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2059,7 +1959,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_waypoint_serialize(
             system_symbol=system_symbol,
@@ -2067,22 +1967,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetWaypoint200Response",
+            "200": "GetWaypoint200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     def get_waypoint_with_http_info(
@@ -2093,9 +1991,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2130,7 +2027,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_waypoint_serialize(
             system_symbol=system_symbol,
@@ -2138,22 +2035,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetWaypoint200Response",
+            "200": "GetWaypoint200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
-
 
     @validate_call
     def get_waypoint_without_preload_content(
@@ -2164,9 +2059,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2201,7 +2095,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_waypoint_serialize(
             system_symbol=system_symbol,
@@ -2209,18 +2103,16 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetWaypoint200Response",
+            "200": "GetWaypoint200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_waypoint_serialize(
         self,
@@ -2231,11 +2123,9 @@ class SystemsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -2246,31 +2136,25 @@ class SystemsApi:
 
         # process the path parameters
         if system_symbol is not None:
-            _path_params['systemSymbol'] = system_symbol
+            _path_params["systemSymbol"] = system_symbol
         if waypoint_symbol is not None:
-            _path_params['waypointSymbol'] = waypoint_symbol
+            _path_params["waypointSymbol"] = waypoint_symbol
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/systems/{systemSymbol}/waypoints/{waypointSymbol}',
+            method="GET",
+            resource_path="/systems/{systemSymbol}/waypoints/{waypointSymbol}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2280,11 +2164,8 @@ class SystemsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def supply_construction(
@@ -2296,9 +2177,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2313,7 +2193,7 @@ class SystemsApi:
         :type system_symbol: str
         :param waypoint_symbol: The waypoint symbol (required)
         :type waypoint_symbol: str
-        :param supply_construction_request: 
+        :param supply_construction_request:
         :type supply_construction_request: SupplyConstructionRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2335,7 +2215,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._supply_construction_serialize(
             system_symbol=system_symbol,
@@ -2344,22 +2224,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "SupplyConstruction201Response",
+            "201": "SupplyConstruction201Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     def supply_construction_with_http_info(
@@ -2371,9 +2249,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2388,7 +2265,7 @@ class SystemsApi:
         :type system_symbol: str
         :param waypoint_symbol: The waypoint symbol (required)
         :type waypoint_symbol: str
-        :param supply_construction_request: 
+        :param supply_construction_request:
         :type supply_construction_request: SupplyConstructionRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2410,7 +2287,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._supply_construction_serialize(
             system_symbol=system_symbol,
@@ -2419,22 +2296,20 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "SupplyConstruction201Response",
+            "201": "SupplyConstruction201Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
-
 
     @validate_call
     def supply_construction_without_preload_content(
@@ -2446,9 +2321,8 @@ class SystemsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2463,7 +2337,7 @@ class SystemsApi:
         :type system_symbol: str
         :param waypoint_symbol: The waypoint symbol (required)
         :type waypoint_symbol: str
-        :param supply_construction_request: 
+        :param supply_construction_request:
         :type supply_construction_request: SupplyConstructionRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2485,7 +2359,7 @@ class SystemsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._supply_construction_serialize(
             system_symbol=system_symbol,
@@ -2494,18 +2368,16 @@ class SystemsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "SupplyConstruction201Response",
+            "201": "SupplyConstruction201Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _supply_construction_serialize(
         self,
@@ -2517,11 +2389,9 @@ class SystemsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -2532,9 +2402,9 @@ class SystemsApi:
 
         # process the path parameters
         if system_symbol is not None:
-            _path_params['systemSymbol'] = system_symbol
+            _path_params["systemSymbol"] = system_symbol
         if waypoint_symbol is not None:
-            _path_params['waypointSymbol'] = waypoint_symbol
+            _path_params["waypointSymbol"] = waypoint_symbol
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -2542,36 +2412,27 @@ class SystemsApi:
         if supply_construction_request is not None:
             _body_params = supply_construction_request
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
         # set the HTTP header `Content-Type`
         if _content_type:
-            _header_params['Content-Type'] = _content_type
+            _header_params["Content-Type"] = _content_type
         else:
-            _default_content_type = (
-                self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
+            _default_content_type = self.api_client.select_header_content_type(
+                ["application/json"]
             )
             if _default_content_type is not None:
-                _header_params['Content-Type'] = _default_content_type
+                _header_params["Content-Type"] = _default_content_type
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='POST',
-            resource_path='/systems/{systemSymbol}/waypoints/{waypointSymbol}/construction/supply',
+            method="POST",
+            resource_path="/systems/{systemSymbol}/waypoints/{waypointSymbol}/construction/supply",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2581,7 +2442,5 @@ class SystemsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-

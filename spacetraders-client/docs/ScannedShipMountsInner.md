@@ -6,7 +6,7 @@ A mount on the ship.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | The symbol of the mount. | 
+**symbol** | **str** | The symbol of the mount. |
 
 ## Example
 
@@ -25,6 +25,5 @@ scanned_ship_mounts_inner_dict = scanned_ship_mounts_inner_instance.to_dict()
 # create an instance of ScannedShipMountsInner from a dict
 scanned_ship_mounts_inner_form_dict = scanned_ship_mounts_inner.from_dict(scanned_ship_mounts_inner_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -54,18 +54,18 @@ class ContractsApi:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
-
     @validate_call
     def accept_contract(
         self,
-        contract_id: Annotated[StrictStr, Field(description="The contract ID to accept.")],
+        contract_id: Annotated[
+            StrictStr, Field(description="The contract ID to accept.")
+        ],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -98,22 +98,21 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._accept_contract_serialize(
             contract_id=contract_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AcceptContract200Response",
+            "200": "AcceptContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -121,18 +120,18 @@ class ContractsApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     def accept_contract_with_http_info(
         self,
-        contract_id: Annotated[StrictStr, Field(description="The contract ID to accept.")],
+        contract_id: Annotated[
+            StrictStr, Field(description="The contract ID to accept.")
+        ],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -165,22 +164,21 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._accept_contract_serialize(
             contract_id=contract_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AcceptContract200Response",
+            "200": "AcceptContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -188,18 +186,18 @@ class ContractsApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     def accept_contract_without_preload_content(
         self,
-        contract_id: Annotated[StrictStr, Field(description="The contract ID to accept.")],
+        contract_id: Annotated[
+            StrictStr, Field(description="The contract ID to accept.")
+        ],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -232,25 +230,23 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._accept_contract_serialize(
             contract_id=contract_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "AcceptContract200Response",
+            "200": "AcceptContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _accept_contract_serialize(
         self,
@@ -260,11 +256,9 @@ class ContractsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -275,29 +269,23 @@ class ContractsApi:
 
         # process the path parameters
         if contract_id is not None:
-            _path_params['contractId'] = contract_id
+            _path_params["contractId"] = contract_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='POST',
-            resource_path='/my/contracts/{contractId}/accept',
+            method="POST",
+            resource_path="/my/contracts/{contractId}/accept",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -307,11 +295,8 @@ class ContractsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def deliver_contract(
@@ -322,9 +307,8 @@ class ContractsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -337,7 +321,7 @@ class ContractsApi:
 
         :param contract_id: The ID of the contract. (required)
         :type contract_id: str
-        :param deliver_contract_request: 
+        :param deliver_contract_request:
         :type deliver_contract_request: DeliverContractRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -359,7 +343,7 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._deliver_contract_serialize(
             contract_id=contract_id,
@@ -367,22 +351,20 @@ class ContractsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DeliverContract200Response",
+            "200": "DeliverContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     def deliver_contract_with_http_info(
@@ -393,9 +375,8 @@ class ContractsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -408,7 +389,7 @@ class ContractsApi:
 
         :param contract_id: The ID of the contract. (required)
         :type contract_id: str
-        :param deliver_contract_request: 
+        :param deliver_contract_request:
         :type deliver_contract_request: DeliverContractRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -430,7 +411,7 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._deliver_contract_serialize(
             contract_id=contract_id,
@@ -438,22 +419,20 @@ class ContractsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DeliverContract200Response",
+            "200": "DeliverContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
-
 
     @validate_call
     def deliver_contract_without_preload_content(
@@ -464,9 +443,8 @@ class ContractsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -479,7 +457,7 @@ class ContractsApi:
 
         :param contract_id: The ID of the contract. (required)
         :type contract_id: str
-        :param deliver_contract_request: 
+        :param deliver_contract_request:
         :type deliver_contract_request: DeliverContractRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -501,7 +479,7 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._deliver_contract_serialize(
             contract_id=contract_id,
@@ -509,18 +487,16 @@ class ContractsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "DeliverContract200Response",
+            "200": "DeliverContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _deliver_contract_serialize(
         self,
@@ -531,11 +507,9 @@ class ContractsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -546,7 +520,7 @@ class ContractsApi:
 
         # process the path parameters
         if contract_id is not None:
-            _path_params['contractId'] = contract_id
+            _path_params["contractId"] = contract_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -554,36 +528,27 @@ class ContractsApi:
         if deliver_contract_request is not None:
             _body_params = deliver_contract_request
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
         # set the HTTP header `Content-Type`
         if _content_type:
-            _header_params['Content-Type'] = _content_type
+            _header_params["Content-Type"] = _content_type
         else:
-            _default_content_type = (
-                self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
+            _default_content_type = self.api_client.select_header_content_type(
+                ["application/json"]
             )
             if _default_content_type is not None:
-                _header_params['Content-Type'] = _default_content_type
+                _header_params["Content-Type"] = _default_content_type
 
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='POST',
-            resource_path='/my/contracts/{contractId}/deliver',
+            method="POST",
+            resource_path="/my/contracts/{contractId}/deliver",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -593,23 +558,21 @@ class ContractsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def fulfill_contract(
         self,
-        contract_id: Annotated[StrictStr, Field(description="The ID of the contract to fulfill.")],
+        contract_id: Annotated[
+            StrictStr, Field(description="The ID of the contract to fulfill.")
+        ],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -642,22 +605,21 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._fulfill_contract_serialize(
             contract_id=contract_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "FulfillContract200Response",
+            "200": "FulfillContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -665,18 +627,18 @@ class ContractsApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     def fulfill_contract_with_http_info(
         self,
-        contract_id: Annotated[StrictStr, Field(description="The ID of the contract to fulfill.")],
+        contract_id: Annotated[
+            StrictStr, Field(description="The ID of the contract to fulfill.")
+        ],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -709,22 +671,21 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._fulfill_contract_serialize(
             contract_id=contract_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "FulfillContract200Response",
+            "200": "FulfillContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -732,18 +693,18 @@ class ContractsApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     def fulfill_contract_without_preload_content(
         self,
-        contract_id: Annotated[StrictStr, Field(description="The ID of the contract to fulfill.")],
+        contract_id: Annotated[
+            StrictStr, Field(description="The ID of the contract to fulfill.")
+        ],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -776,25 +737,23 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._fulfill_contract_serialize(
             contract_id=contract_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "FulfillContract200Response",
+            "200": "FulfillContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _fulfill_contract_serialize(
         self,
@@ -804,11 +763,9 @@ class ContractsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -819,29 +776,23 @@ class ContractsApi:
 
         # process the path parameters
         if contract_id is not None:
-            _path_params['contractId'] = contract_id
+            _path_params["contractId"] = contract_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='POST',
-            resource_path='/my/contracts/{contractId}/fulfill',
+            method="POST",
+            resource_path="/my/contracts/{contractId}/fulfill",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -851,11 +802,8 @@ class ContractsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def get_contract(
@@ -865,9 +813,8 @@ class ContractsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -900,29 +847,27 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_contract_serialize(
             contract_id=contract_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetContract200Response",
+            "200": "GetContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
-
 
     @validate_call
     def get_contract_with_http_info(
@@ -932,9 +877,8 @@ class ContractsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -967,29 +911,27 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_contract_serialize(
             contract_id=contract_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetContract200Response",
+            "200": "GetContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
-
 
     @validate_call
     def get_contract_without_preload_content(
@@ -999,9 +941,8 @@ class ContractsApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1034,25 +975,23 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_contract_serialize(
             contract_id=contract_id,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetContract200Response",
+            "200": "GetContract200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_contract_serialize(
         self,
@@ -1062,11 +1001,9 @@ class ContractsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1077,29 +1014,23 @@ class ContractsApi:
 
         # process the path parameters
         if contract_id is not None:
-            _path_params['contractId'] = contract_id
+            _path_params["contractId"] = contract_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/my/contracts/{contractId}',
+            method="GET",
+            resource_path="/my/contracts/{contractId}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1109,24 +1040,26 @@ class ContractsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-
-
 
     @validate_call
     def get_contracts(
         self,
-        page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="What entry offset to request")] = None,
-        limit: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="How many entries to return per page")] = None,
+        page: Annotated[
+            Optional[Annotated[int, Field(strict=True, ge=1)]],
+            Field(description="What entry offset to request"),
+        ] = None,
+        limit: Annotated[
+            Optional[Annotated[int, Field(le=20, strict=True, ge=1)]],
+            Field(description="How many entries to return per page"),
+        ] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1161,7 +1094,7 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_contracts_serialize(
             page=page,
@@ -1169,15 +1102,14 @@ class ContractsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetContracts200Response",
+            "200": "GetContracts200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -1185,19 +1117,23 @@ class ContractsApi:
             response_types_map=_response_types_map,
         ).data
 
-
     @validate_call
     def get_contracts_with_http_info(
         self,
-        page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="What entry offset to request")] = None,
-        limit: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="How many entries to return per page")] = None,
+        page: Annotated[
+            Optional[Annotated[int, Field(strict=True, ge=1)]],
+            Field(description="What entry offset to request"),
+        ] = None,
+        limit: Annotated[
+            Optional[Annotated[int, Field(le=20, strict=True, ge=1)]],
+            Field(description="How many entries to return per page"),
+        ] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1232,7 +1168,7 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_contracts_serialize(
             page=page,
@@ -1240,15 +1176,14 @@ class ContractsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetContracts200Response",
+            "200": "GetContracts200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
@@ -1256,19 +1191,23 @@ class ContractsApi:
             response_types_map=_response_types_map,
         )
 
-
     @validate_call
     def get_contracts_without_preload_content(
         self,
-        page: Annotated[Optional[Annotated[int, Field(strict=True, ge=1)]], Field(description="What entry offset to request")] = None,
-        limit: Annotated[Optional[Annotated[int, Field(le=20, strict=True, ge=1)]], Field(description="How many entries to return per page")] = None,
+        page: Annotated[
+            Optional[Annotated[int, Field(strict=True, ge=1)]],
+            Field(description="What entry offset to request"),
+        ] = None,
+        limit: Annotated[
+            Optional[Annotated[int, Field(le=20, strict=True, ge=1)]],
+            Field(description="How many entries to return per page"),
+        ] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1303,7 +1242,7 @@ class ContractsApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """ # noqa: E501
+        """  # noqa: E501
 
         _param = self._get_contracts_serialize(
             page=page,
@@ -1311,18 +1250,16 @@ class ContractsApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index
+            _host_index=_host_index,
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "GetContracts200Response",
+            "200": "GetContracts200Response",
         }
         response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
+            *_param, _request_timeout=_request_timeout
         )
         return response_data.response
-
 
     def _get_contracts_serialize(
         self,
@@ -1333,11 +1270,9 @@ class ContractsApi:
         _headers,
         _host_index,
     ) -> Tuple:
-
         _host = None
 
-        _collection_formats: Dict[str, str] = {
-        }
+        _collection_formats: Dict[str, str] = {}
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1349,34 +1284,26 @@ class ContractsApi:
         # process the path parameters
         # process the query parameters
         if page is not None:
-            
-            _query_params.append(('page', page))
-            
+            _query_params.append(("page", page))
+
         if limit is not None:
-            
-            _query_params.append(('limit', limit))
-            
+            _query_params.append(("limit", limit))
+
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
-
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
+        _header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
         )
 
-
         # authentication setting
-        _auth_settings: List[str] = [
-            'AgentToken'
-        ]
+        _auth_settings: List[str] = ["AgentToken"]
 
         return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/my/contracts',
+            method="GET",
+            resource_path="/my/contracts",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1386,7 +1313,5 @@ class ContractsApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth
+            _request_auth=_request_auth,
         )
-
-

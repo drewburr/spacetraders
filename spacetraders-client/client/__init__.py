@@ -5,7 +5,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -51,20 +51,36 @@ from client.models.contract_terms import ContractTerms
 from client.models.cooldown import Cooldown
 from client.models.create_chart201_response import CreateChart201Response
 from client.models.create_chart201_response_data import CreateChart201ResponseData
-from client.models.create_ship_ship_scan201_response import CreateShipShipScan201Response
-from client.models.create_ship_ship_scan201_response_data import CreateShipShipScan201ResponseData
-from client.models.create_ship_system_scan201_response import CreateShipSystemScan201Response
-from client.models.create_ship_system_scan201_response_data import CreateShipSystemScan201ResponseData
-from client.models.create_ship_waypoint_scan201_response import CreateShipWaypointScan201Response
-from client.models.create_ship_waypoint_scan201_response_data import CreateShipWaypointScan201ResponseData
+from client.models.create_ship_ship_scan201_response import (
+    CreateShipShipScan201Response,
+)
+from client.models.create_ship_ship_scan201_response_data import (
+    CreateShipShipScan201ResponseData,
+)
+from client.models.create_ship_system_scan201_response import (
+    CreateShipSystemScan201Response,
+)
+from client.models.create_ship_system_scan201_response_data import (
+    CreateShipSystemScan201ResponseData,
+)
+from client.models.create_ship_waypoint_scan201_response import (
+    CreateShipWaypointScan201Response,
+)
+from client.models.create_ship_waypoint_scan201_response_data import (
+    CreateShipWaypointScan201ResponseData,
+)
 from client.models.create_survey201_response import CreateSurvey201Response
 from client.models.create_survey201_response_data import CreateSurvey201ResponseData
 from client.models.deliver_contract200_response import DeliverContract200Response
-from client.models.deliver_contract200_response_data import DeliverContract200ResponseData
+from client.models.deliver_contract200_response_data import (
+    DeliverContract200ResponseData,
+)
 from client.models.deliver_contract_request import DeliverContractRequest
 from client.models.dock_ship200_response import DockShip200Response
 from client.models.extract_resources201_response import ExtractResources201Response
-from client.models.extract_resources201_response_data import ExtractResources201ResponseData
+from client.models.extract_resources201_response_data import (
+    ExtractResources201ResponseData,
+)
 from client.models.extract_resources_request import ExtractResourcesRequest
 from client.models.extraction import Extraction
 from client.models.extraction_yield import ExtractionYield
@@ -90,16 +106,30 @@ from client.models.get_ship_cooldown200_response import GetShipCooldown200Respon
 from client.models.get_ship_nav200_response import GetShipNav200Response
 from client.models.get_shipyard200_response import GetShipyard200Response
 from client.models.get_status200_response import GetStatus200Response
-from client.models.get_status200_response_announcements_inner import GetStatus200ResponseAnnouncementsInner
-from client.models.get_status200_response_leaderboards import GetStatus200ResponseLeaderboards
-from client.models.get_status200_response_leaderboards_most_credits_inner import GetStatus200ResponseLeaderboardsMostCreditsInner
-from client.models.get_status200_response_leaderboards_most_submitted_charts_inner import GetStatus200ResponseLeaderboardsMostSubmittedChartsInner
-from client.models.get_status200_response_links_inner import GetStatus200ResponseLinksInner
-from client.models.get_status200_response_server_resets import GetStatus200ResponseServerResets
+from client.models.get_status200_response_announcements_inner import (
+    GetStatus200ResponseAnnouncementsInner,
+)
+from client.models.get_status200_response_leaderboards import (
+    GetStatus200ResponseLeaderboards,
+)
+from client.models.get_status200_response_leaderboards_most_credits_inner import (
+    GetStatus200ResponseLeaderboardsMostCreditsInner,
+)
+from client.models.get_status200_response_leaderboards_most_submitted_charts_inner import (
+    GetStatus200ResponseLeaderboardsMostSubmittedChartsInner,
+)
+from client.models.get_status200_response_links_inner import (
+    GetStatus200ResponseLinksInner,
+)
+from client.models.get_status200_response_server_resets import (
+    GetStatus200ResponseServerResets,
+)
 from client.models.get_status200_response_stats import GetStatus200ResponseStats
 from client.models.get_system200_response import GetSystem200Response
 from client.models.get_system_waypoints200_response import GetSystemWaypoints200Response
-from client.models.get_system_waypoints_traits_parameter import GetSystemWaypointsTraitsParameter
+from client.models.get_system_waypoints_traits_parameter import (
+    GetSystemWaypointsTraitsParameter,
+)
 from client.models.get_systems200_response import GetSystems200Response
 from client.models.get_waypoint200_response import GetWaypoint200Response
 from client.models.install_mount201_response import InstallMount201Response
@@ -120,7 +150,9 @@ from client.models.navigate_ship200_response import NavigateShip200Response
 from client.models.navigate_ship200_response_data import NavigateShip200ResponseData
 from client.models.navigate_ship_request import NavigateShipRequest
 from client.models.negotiate_contract200_response import NegotiateContract200Response
-from client.models.negotiate_contract200_response_data import NegotiateContract200ResponseData
+from client.models.negotiate_contract200_response_data import (
+    NegotiateContract200ResponseData,
+)
 from client.models.orbit_ship200_response import OrbitShip200Response
 from client.models.orbit_ship200_response_data import OrbitShip200ResponseData
 from client.models.patch_ship_nav_request import PatchShipNavRequest
@@ -167,7 +199,9 @@ from client.models.ship_nav_status import ShipNavStatus
 from client.models.ship_reactor import ShipReactor
 from client.models.ship_refine201_response import ShipRefine201Response
 from client.models.ship_refine201_response_data import ShipRefine201ResponseData
-from client.models.ship_refine201_response_data_produced_inner import ShipRefine201ResponseDataProducedInner
+from client.models.ship_refine201_response_data_produced_inner import (
+    ShipRefine201ResponseDataProducedInner,
+)
 from client.models.ship_refine_request import ShipRefineRequest
 from client.models.ship_registration import ShipRegistration
 from client.models.ship_requirements import ShipRequirements
@@ -180,10 +214,14 @@ from client.models.shipyard_ship_types_inner import ShipyardShipTypesInner
 from client.models.shipyard_transaction import ShipyardTransaction
 from client.models.siphon import Siphon
 from client.models.siphon_resources201_response import SiphonResources201Response
-from client.models.siphon_resources201_response_data import SiphonResources201ResponseData
+from client.models.siphon_resources201_response_data import (
+    SiphonResources201ResponseData,
+)
 from client.models.siphon_yield import SiphonYield
 from client.models.supply_construction201_response import SupplyConstruction201Response
-from client.models.supply_construction201_response_data import SupplyConstruction201ResponseData
+from client.models.supply_construction201_response_data import (
+    SupplyConstruction201ResponseData,
+)
 from client.models.supply_construction_request import SupplyConstructionRequest
 from client.models.supply_level import SupplyLevel
 from client.models.survey import Survey

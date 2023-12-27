@@ -6,8 +6,8 @@ A yield from the extraction operation.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**TradeSymbol**](TradeSymbol.md) |  | 
-**units** | **int** | The number of units extracted that were placed into the ship&#39;s cargo hold. | 
+**symbol** | [**TradeSymbol**](TradeSymbol.md) |  |
+**units** | **int** | The number of units extracted that were placed into the ship&#39;s cargo hold. |
 
 ## Example
 
@@ -26,6 +26,5 @@ extraction_yield_dict = extraction_yield_instance.to_dict()
 # create an instance of ExtractionYield from a dict
 extraction_yield_form_dict = extraction_yield.from_dict(extraction_yield_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -1,12 +1,11 @@
 # DeliverContract200ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contract** | [**Contract**](Contract.md) |  | 
-**cargo** | [**ShipCargo**](ShipCargo.md) |  | 
+**contract** | [**Contract**](Contract.md) |  |
+**cargo** | [**ShipCargo**](ShipCargo.md) |  |
 
 ## Example
 
@@ -25,6 +24,5 @@ deliver_contract200_response_data_dict = deliver_contract200_response_data_insta
 # create an instance of DeliverContract200ResponseData from a dict
 deliver_contract200_response_data_form_dict = deliver_contract200_response_data.from_dict(deliver_contract200_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

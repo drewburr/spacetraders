@@ -1,6 +1,6 @@
 # client.ContractsApi
 
-All URIs are relative to *https://api.spacetraders.io/v2*
+All URIs are relative to *<https://api.spacetraders.io/v2>*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**get_contract**](ContractsApi.md#get_contract) | **GET** /my/contracts/{contractId} | Get Contract
 [**get_contracts**](ContractsApi.md#get_contracts) | **GET** /my/contracts | List Contracts
 
-
 # **accept_contract**
+>
 > AcceptContract200Response accept_contract(contract_id)
 
 Accept Contract
@@ -61,14 +61,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling ContractsApi->accept_contract: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contract_id** | **str**| The contract ID to accept. | 
+ **contract_id** | **str**| The contract ID to accept. |
 
 ### Return type
 
@@ -80,8 +77,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -92,6 +89,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deliver_contract**
+>
 > DeliverContract200Response deliver_contract(contract_id, deliver_contract_request=deliver_contract_request)
 
 Deliver Cargo to Contract
@@ -143,15 +141,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling ContractsApi->deliver_contract: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contract_id** | **str**| The ID of the contract. | 
- **deliver_contract_request** | [**DeliverContractRequest**](DeliverContractRequest.md)|  | [optional] 
+ **contract_id** | **str**| The ID of the contract. |
+ **deliver_contract_request** | [**DeliverContractRequest**](DeliverContractRequest.md)|  | [optional]
 
 ### Return type
 
@@ -163,8 +158,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -175,6 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **fulfill_contract**
+>
 > FulfillContract200Response fulfill_contract(contract_id)
 
 Fulfill Contract
@@ -224,14 +220,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling ContractsApi->fulfill_contract: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contract_id** | **str**| The ID of the contract to fulfill. | 
+ **contract_id** | **str**| The ID of the contract to fulfill. |
 
 ### Return type
 
@@ -243,8 +236,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -255,6 +248,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_contract**
+>
 > GetContract200Response get_contract(contract_id)
 
 Get Contract
@@ -304,14 +298,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling ContractsApi->get_contract: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contract_id** | **str**| The contract ID | 
+ **contract_id** | **str**| The contract ID |
 
 ### Return type
 
@@ -323,8 +314,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -335,6 +326,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_contracts**
+>
 > GetContracts200Response get_contracts(page=page, limit=limit)
 
 List Contracts
@@ -385,10 +377,7 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling ContractsApi->get_contracts: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -405,8 +394,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -415,4 +404,3 @@ Name | Type | Description  | Notes
 **200** | Succesfully listed contracts. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

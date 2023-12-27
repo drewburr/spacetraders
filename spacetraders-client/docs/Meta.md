@@ -6,7 +6,7 @@ Meta details for pagination.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total** | **int** | Shows the total amount of items of this kind that exist. | 
+**total** | **int** | Shows the total amount of items of this kind that exist. |
 **page** | **int** | A page denotes an amount of items, offset from the first item. Each page holds an amount of items equal to the &#x60;limit&#x60;. | [default to 1]
 **limit** | **int** | The amount of items in each page. Limits how many items can be fetched at once. | [default to 10]
 
@@ -27,6 +27,5 @@ meta_dict = meta_instance.to_dict()
 # create an instance of Meta from a dict
 meta_form_dict = meta.from_dict(meta_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -26,29 +26,53 @@ from typing_extensions import Annotated
 from client.models.activity_level import ActivityLevel
 from client.models.supply_level import SupplyLevel
 from client.models.trade_symbol import TradeSymbol
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class MarketTradeGood(BaseModel):
     """
     MarketTradeGood
-    """ # noqa: E501
+    """  # noqa: E501
+
     symbol: TradeSymbol
-    type: StrictStr = Field(description="The type of trade good (export, import, or exchange).")
-    trade_volume: Annotated[int, Field(strict=True, ge=1)] = Field(description="This is the maximum number of units that can be purchased or sold at this market in a single trade for this good. Trade volume also gives an indication of price volatility. A market with a low trade volume will have large price swings, while high trade volume will be more resilient to price changes.", alias="tradeVolume")
+    type: StrictStr = Field(
+        description="The type of trade good (export, import, or exchange)."
+    )
+    trade_volume: Annotated[int, Field(strict=True, ge=1)] = Field(
+        description="This is the maximum number of units that can be purchased or sold at this market in a single trade for this good. Trade volume also gives an indication of price volatility. A market with a low trade volume will have large price swings, while high trade volume will be more resilient to price changes.",
+        alias="tradeVolume",
+    )
     supply: SupplyLevel
     activity: Optional[ActivityLevel] = None
-    purchase_price: Annotated[int, Field(strict=True, ge=0)] = Field(description="The price at which this good can be purchased from the market.", alias="purchasePrice")
-    sell_price: Annotated[int, Field(strict=True, ge=0)] = Field(description="The price at which this good can be sold to the market.", alias="sellPrice")
-    __properties: ClassVar[List[str]] = ["symbol", "type", "tradeVolume", "supply", "activity", "purchasePrice", "sellPrice"]
+    purchase_price: Annotated[int, Field(strict=True, ge=0)] = Field(
+        description="The price at which this good can be purchased from the market.",
+        alias="purchasePrice",
+    )
+    sell_price: Annotated[int, Field(strict=True, ge=0)] = Field(
+        description="The price at which this good can be sold to the market.",
+        alias="sellPrice",
+    )
+    __properties: ClassVar[List[str]] = [
+        "symbol",
+        "type",
+        "tradeVolume",
+        "supply",
+        "activity",
+        "purchasePrice",
+        "sellPrice",
+    ]
 
-    @field_validator('type')
+    @field_validator("type")
     def type_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('EXPORT', 'IMPORT', 'EXCHANGE'):
-            raise ValueError("must be one of enum values ('EXPORT', 'IMPORT', 'EXCHANGE')")
+        if value not in ("EXPORT", "IMPORT", "EXCHANGE"):
+            raise ValueError(
+                "must be one of enum values ('EXPORT', 'IMPORT', 'EXCHANGE')"
+            )
         return value
 
     model_config = {
@@ -56,7 +80,6 @@ class MarketTradeGood(BaseModel):
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -84,8 +107,7 @@ class MarketTradeGood(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         return _dict
@@ -99,15 +121,15 @@ class MarketTradeGood(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "symbol": obj.get("symbol"),
-            "type": obj.get("type"),
-            "tradeVolume": obj.get("tradeVolume"),
-            "supply": obj.get("supply"),
-            "activity": obj.get("activity"),
-            "purchasePrice": obj.get("purchasePrice"),
-            "sellPrice": obj.get("sellPrice")
-        })
+        _obj = cls.model_validate(
+            {
+                "symbol": obj.get("symbol"),
+                "type": obj.get("type"),
+                "tradeVolume": obj.get("tradeVolume"),
+                "supply": obj.get("supply"),
+                "activity": obj.get("activity"),
+                "purchasePrice": obj.get("purchasePrice"),
+                "sellPrice": obj.get("sellPrice"),
+            }
+        )
         return _obj
-
-

@@ -1,11 +1,10 @@
 # ShipyardShipTypesInner
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**ShipType**](ShipType.md) |  | 
+**type** | [**ShipType**](ShipType.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ shipyard_ship_types_inner_dict = shipyard_ship_types_inner_instance.to_dict()
 # create an instance of ShipyardShipTypesInner from a dict
 shipyard_ship_types_inner_form_dict = shipyard_ship_types_inner.from_dict(shipyard_ship_types_inner_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

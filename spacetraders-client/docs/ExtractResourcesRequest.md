@@ -1,11 +1,10 @@
 # ExtractResourcesRequest
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**survey** | [**Survey**](Survey.md) |  | [optional] 
+**survey** | [**Survey**](Survey.md) |  | [optional]
 
 ## Example
 
@@ -24,6 +23,5 @@ extract_resources_request_dict = extract_resources_request_instance.to_dict()
 # create an instance of ExtractResourcesRequest from a dict
 extract_resources_request_form_dict = extract_resources_request.from_dict(extract_resources_request_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -1,13 +1,12 @@
 # TransferCargoRequest
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**trade_symbol** | [**TradeSymbol**](TradeSymbol.md) |  | 
-**units** | **int** | Amount of units to transfer. | 
-**ship_symbol** | **str** | The symbol of the ship to transfer to. | 
+**trade_symbol** | [**TradeSymbol**](TradeSymbol.md) |  |
+**units** | **int** | Amount of units to transfer. |
+**ship_symbol** | **str** | The symbol of the ship to transfer to. |
 
 ## Example
 
@@ -26,6 +25,5 @@ transfer_cargo_request_dict = transfer_cargo_request_instance.to_dict()
 # create an instance of TransferCargoRequest from a dict
 transfer_cargo_request_form_dict = transfer_cargo_request.from_dict(transfer_cargo_request_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

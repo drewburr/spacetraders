@@ -1,13 +1,12 @@
 # ExtractResources201ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cooldown** | [**Cooldown**](Cooldown.md) |  | 
-**extraction** | [**Extraction**](Extraction.md) |  | 
-**cargo** | [**ShipCargo**](ShipCargo.md) |  | 
+**cooldown** | [**Cooldown**](Cooldown.md) |  |
+**extraction** | [**Extraction**](Extraction.md) |  |
+**cargo** | [**ShipCargo**](ShipCargo.md) |  |
 
 ## Example
 
@@ -26,6 +25,5 @@ extract_resources201_response_data_dict = extract_resources201_response_data_ins
 # create an instance of ExtractResources201ResponseData from a dict
 extract_resources201_response_data_form_dict = extract_resources201_response_data.from_dict(extract_resources201_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

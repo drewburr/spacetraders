@@ -1,14 +1,14 @@
 # client.FactionsApi
 
-All URIs are relative to *https://api.spacetraders.io/v2*
+All URIs are relative to *<https://api.spacetraders.io/v2>*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_faction**](FactionsApi.md#get_faction) | **GET** /factions/{factionSymbol} | Get Faction
 [**get_factions**](FactionsApi.md#get_factions) | **GET** /factions | List Factions
 
-
 # **get_faction**
+>
 > GetFaction200Response get_faction(faction_symbol)
 
 Get Faction
@@ -58,14 +58,11 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FactionsApi->get_faction: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faction_symbol** | **str**| The faction symbol | 
+ **faction_symbol** | **str**| The faction symbol |
 
 ### Return type
 
@@ -77,8 +74,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -89,6 +86,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_factions**
+>
 > GetFactions200Response get_factions(page=page, limit=limit)
 
 List Factions
@@ -139,10 +137,7 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling FactionsApi->get_factions: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -159,8 +154,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -169,4 +164,3 @@ Name | Type | Description  | Notes
 **200** | Succesfully fetched factions. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

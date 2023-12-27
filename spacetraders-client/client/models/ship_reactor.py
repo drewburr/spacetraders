@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -24,28 +24,52 @@ from pydantic import BaseModel, StrictStr, field_validator
 from pydantic import Field
 from typing_extensions import Annotated
 from client.models.ship_requirements import ShipRequirements
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class ShipReactor(BaseModel):
     """
     The reactor of the ship. The reactor is responsible for powering the ship's systems and weapons.
-    """ # noqa: E501
+    """  # noqa: E501
+
     symbol: StrictStr = Field(description="Symbol of the reactor.")
     name: StrictStr = Field(description="Name of the reactor.")
     description: StrictStr = Field(description="Description of the reactor.")
-    condition: Optional[Annotated[int, Field(le=100, strict=True, ge=0)]] = Field(default=None, description="Condition is a range of 0 to 100 where 0 is completely worn out and 100 is brand new.")
-    power_output: Annotated[int, Field(strict=True, ge=1)] = Field(description="The amount of power provided by this reactor. The more power a reactor provides to the ship, the lower the cooldown it gets when using a module or mount that taxes the ship's power.", alias="powerOutput")
+    condition: Optional[Annotated[int, Field(le=100, strict=True, ge=0)]] = Field(
+        default=None,
+        description="Condition is a range of 0 to 100 where 0 is completely worn out and 100 is brand new.",
+    )
+    power_output: Annotated[int, Field(strict=True, ge=1)] = Field(
+        description="The amount of power provided by this reactor. The more power a reactor provides to the ship, the lower the cooldown it gets when using a module or mount that taxes the ship's power.",
+        alias="powerOutput",
+    )
     requirements: ShipRequirements
-    __properties: ClassVar[List[str]] = ["symbol", "name", "description", "condition", "powerOutput", "requirements"]
+    __properties: ClassVar[List[str]] = [
+        "symbol",
+        "name",
+        "description",
+        "condition",
+        "powerOutput",
+        "requirements",
+    ]
 
-    @field_validator('symbol')
+    @field_validator("symbol")
     def symbol_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('REACTOR_SOLAR_I', 'REACTOR_FUSION_I', 'REACTOR_FISSION_I', 'REACTOR_CHEMICAL_I', 'REACTOR_ANTIMATTER_I'):
-            raise ValueError("must be one of enum values ('REACTOR_SOLAR_I', 'REACTOR_FUSION_I', 'REACTOR_FISSION_I', 'REACTOR_CHEMICAL_I', 'REACTOR_ANTIMATTER_I')")
+        if value not in (
+            "REACTOR_SOLAR_I",
+            "REACTOR_FUSION_I",
+            "REACTOR_FISSION_I",
+            "REACTOR_CHEMICAL_I",
+            "REACTOR_ANTIMATTER_I",
+        ):
+            raise ValueError(
+                "must be one of enum values ('REACTOR_SOLAR_I', 'REACTOR_FUSION_I', 'REACTOR_FISSION_I', 'REACTOR_CHEMICAL_I', 'REACTOR_ANTIMATTER_I')"
+            )
         return value
 
     model_config = {
@@ -53,7 +77,6 @@ class ShipReactor(BaseModel):
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -81,13 +104,12 @@ class ShipReactor(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of requirements
         if self.requirements:
-            _dict['requirements'] = self.requirements.to_dict()
+            _dict["requirements"] = self.requirements.to_dict()
         return _dict
 
     @classmethod
@@ -99,14 +121,16 @@ class ShipReactor(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "symbol": obj.get("symbol"),
-            "name": obj.get("name"),
-            "description": obj.get("description"),
-            "condition": obj.get("condition"),
-            "powerOutput": obj.get("powerOutput"),
-            "requirements": ShipRequirements.from_dict(obj.get("requirements")) if obj.get("requirements") is not None else None
-        })
+        _obj = cls.model_validate(
+            {
+                "symbol": obj.get("symbol"),
+                "name": obj.get("name"),
+                "description": obj.get("description"),
+                "condition": obj.get("condition"),
+                "powerOutput": obj.get("powerOutput"),
+                "requirements": ShipRequirements.from_dict(obj.get("requirements"))
+                if obj.get("requirements") is not None
+                else None,
+            }
+        )
         return _obj
-
-

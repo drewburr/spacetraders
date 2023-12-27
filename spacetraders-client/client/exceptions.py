@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -16,14 +16,16 @@ from typing import Any, Optional
 
 from typing_extensions import Self
 
+
 class OpenApiException(Exception):
     """The base exception class for all OpenAPIExceptions"""
 
 
 class ApiTypeError(OpenApiException, TypeError):
-    def __init__(self, msg, path_to_item=None, valid_classes=None,
-                 key_type=None) -> None:
-        """ Raises an exception for TypeErrors
+    def __init__(
+        self, msg, path_to_item=None, valid_classes=None, key_type=None
+    ) -> None:
+        """Raises an exception for TypeErrors
 
         Args:
             msg (str): the exception message
@@ -104,11 +106,10 @@ class ApiKeyError(OpenApiException, KeyError):
 
 
 class ApiException(OpenApiException):
-
     def __init__(
-        self, 
-        status=None, 
-        reason=None, 
+        self,
+        status=None,
+        reason=None,
         http_resp=None,
         *,
         body: Optional[str] = None,
@@ -127,17 +128,17 @@ class ApiException(OpenApiException):
                 self.reason = http_resp.reason
             if self.body is None:
                 try:
-                    self.body = http_resp.data.decode('utf-8')
+                    self.body = http_resp.data.decode("utf-8")
                 except Exception:
                     pass
             self.headers = http_resp.getheaders()
 
     @classmethod
     def from_response(
-        cls, 
-        *, 
-        http_resp, 
-        body: Optional[str], 
+        cls,
+        *,
+        http_resp,
+        body: Optional[str],
         data: Optional[Any],
     ) -> Self:
         if http_resp.status == 400:
@@ -158,11 +159,9 @@ class ApiException(OpenApiException):
 
     def __str__(self):
         """Custom error messages for exception"""
-        error_message = "({0})\n"\
-                        "Reason: {1}\n".format(self.status, self.reason)
+        error_message = "({0})\n" "Reason: {1}\n".format(self.status, self.reason)
         if self.headers:
-            error_message += "HTTP response headers: {0}\n".format(
-                self.headers)
+            error_message += "HTTP response headers: {0}\n".format(self.headers)
 
         if self.data or self.body:
             error_message += "HTTP response body: {0}\n".format(self.data or self.body)

@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -24,18 +24,27 @@ from pydantic import BaseModel
 from pydantic import Field
 from typing_extensions import Annotated
 from client.models.ship_cargo_item import ShipCargoItem
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class ShipCargo(BaseModel):
     """
     Ship cargo details.
-    """ # noqa: E501
-    capacity: Annotated[int, Field(strict=True, ge=0)] = Field(description="The max number of items that can be stored in the cargo hold.")
-    units: Annotated[int, Field(strict=True, ge=0)] = Field(description="The number of items currently stored in the cargo hold.")
-    inventory: List[ShipCargoItem] = Field(description="The items currently in the cargo hold.")
+    """  # noqa: E501
+
+    capacity: Annotated[int, Field(strict=True, ge=0)] = Field(
+        description="The max number of items that can be stored in the cargo hold."
+    )
+    units: Annotated[int, Field(strict=True, ge=0)] = Field(
+        description="The number of items currently stored in the cargo hold."
+    )
+    inventory: List[ShipCargoItem] = Field(
+        description="The items currently in the cargo hold."
+    )
     __properties: ClassVar[List[str]] = ["capacity", "units", "inventory"]
 
     model_config = {
@@ -43,7 +52,6 @@ class ShipCargo(BaseModel):
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -71,8 +79,7 @@ class ShipCargo(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of each item in inventory (list)
@@ -81,7 +88,7 @@ class ShipCargo(BaseModel):
             for _item in self.inventory:
                 if _item:
                     _items.append(_item.to_dict())
-            _dict['inventory'] = _items
+            _dict["inventory"] = _items
         return _dict
 
     @classmethod
@@ -93,11 +100,15 @@ class ShipCargo(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "capacity": obj.get("capacity"),
-            "units": obj.get("units"),
-            "inventory": [ShipCargoItem.from_dict(_item) for _item in obj.get("inventory")] if obj.get("inventory") is not None else None
-        })
+        _obj = cls.model_validate(
+            {
+                "capacity": obj.get("capacity"),
+                "units": obj.get("units"),
+                "inventory": [
+                    ShipCargoItem.from_dict(_item) for _item in obj.get("inventory")
+                ]
+                if obj.get("inventory") is not None
+                else None,
+            }
+        )
         return _obj
-
-

@@ -1,13 +1,12 @@
 # FactionTrait
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**FactionTraitSymbol**](FactionTraitSymbol.md) |  | 
-**name** | **str** | The name of the trait. | 
-**description** | **str** | A description of the trait. | 
+**symbol** | [**FactionTraitSymbol**](FactionTraitSymbol.md) |  |
+**name** | **str** | The name of the trait. |
+**description** | **str** | A description of the trait. |
 
 ## Example
 
@@ -26,6 +25,5 @@ faction_trait_dict = faction_trait_instance.to_dict()
 # create an instance of FactionTrait from a dict
 faction_trait_form_dict = faction_trait.from_dict(faction_trait_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -6,7 +6,7 @@ The engine of the ship.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | The symbol of the engine. | 
+**symbol** | **str** | The symbol of the engine. |
 
 ## Example
 
@@ -25,6 +25,5 @@ scanned_ship_engine_dict = scanned_ship_engine_instance.to_dict()
 # create an instance of ScannedShipEngine from a dict
 scanned_ship_engine_form_dict = scanned_ship_engine.from_dict(scanned_ship_engine_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

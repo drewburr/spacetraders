@@ -7,4 +7,3 @@ from client.api.factions_api import FactionsApi
 from client.api.fleet_api import FleetApi
 from client.api.systems_api import SystemsApi
 from client.api.default_api import DefaultApi
-

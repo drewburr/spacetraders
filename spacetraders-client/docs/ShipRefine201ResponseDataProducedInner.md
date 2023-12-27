@@ -1,12 +1,11 @@
 # ShipRefine201ResponseDataProducedInner
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**trade_symbol** | **str** | Symbol of the good. | 
-**units** | **int** | Amount of units of the good. | 
+**trade_symbol** | **str** | Symbol of the good. |
+**units** | **int** | Amount of units of the good. |
 
 ## Example
 
@@ -25,6 +24,5 @@ ship_refine201_response_data_produced_inner_dict = ship_refine201_response_data_
 # create an instance of ShipRefine201ResponseDataProducedInner from a dict
 ship_refine201_response_data_produced_inner_form_dict = ship_refine201_response_data_produced_inner.from_dict(ship_refine201_response_data_produced_inner_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

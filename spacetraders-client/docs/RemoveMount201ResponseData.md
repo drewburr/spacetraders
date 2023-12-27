@@ -1,14 +1,13 @@
 # RemoveMount201ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**agent** | [**Agent**](Agent.md) |  | 
-**mounts** | [**List[ShipMount]**](ShipMount.md) | List of installed mounts after the removal of the selected mount. | 
-**cargo** | [**ShipCargo**](ShipCargo.md) |  | 
-**transaction** | [**ShipModificationTransaction**](ShipModificationTransaction.md) |  | 
+**agent** | [**Agent**](Agent.md) |  |
+**mounts** | [**List[ShipMount]**](ShipMount.md) | List of installed mounts after the removal of the selected mount. |
+**cargo** | [**ShipCargo**](ShipCargo.md) |  |
+**transaction** | [**ShipModificationTransaction**](ShipModificationTransaction.md) |  |
 
 ## Example
 
@@ -27,6 +26,5 @@ remove_mount201_response_data_dict = remove_mount201_response_data_instance.to_d
 # create an instance of RemoveMount201ResponseData from a dict
 remove_mount201_response_data_form_dict = remove_mount201_response_data.from_dict(remove_mount201_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

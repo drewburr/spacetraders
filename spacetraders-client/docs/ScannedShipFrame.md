@@ -6,7 +6,7 @@ The frame of the ship.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | The symbol of the frame. | 
+**symbol** | **str** | The symbol of the frame. |
 
 ## Example
 
@@ -25,6 +25,5 @@ scanned_ship_frame_dict = scanned_ship_frame_instance.to_dict()
 # create an instance of ScannedShipFrame from a dict
 scanned_ship_frame_form_dict = scanned_ship_frame.from_dict(scanned_ship_frame_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

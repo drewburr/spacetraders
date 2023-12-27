@@ -6,9 +6,9 @@ The requirements for installation on a ship
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**power** | **int** | The amount of power required from the reactor. | [optional] 
-**crew** | **int** | The number of crew required for operation. | [optional] 
-**slots** | **int** | The number of module slots required for installation. | [optional] 
+**power** | **int** | The amount of power required from the reactor. | [optional]
+**crew** | **int** | The number of crew required for operation. | [optional]
+**slots** | **int** | The number of module slots required for installation. | [optional]
 
 ## Example
 
@@ -27,6 +27,5 @@ ship_requirements_dict = ship_requirements_instance.to_dict()
 # create an instance of ShipRequirements from a dict
 ship_requirements_form_dict = ship_requirements.from_dict(ship_requirements_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

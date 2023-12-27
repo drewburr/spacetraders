@@ -1,12 +1,10 @@
 # SiphonResources201Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**SiphonResources201ResponseData**](SiphonResources201ResponseData.md) |  | 
+**data** | [**SiphonResources201ResponseData**](SiphonResources201ResponseData.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ siphon_resources201_response_dict = siphon_resources201_response_instance.to_dic
 # create an instance of SiphonResources201Response from a dict
 siphon_resources201_response_form_dict = siphon_resources201_response.from_dict(siphon_resources201_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

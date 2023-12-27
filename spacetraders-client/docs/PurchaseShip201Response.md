@@ -1,12 +1,10 @@
 # PurchaseShip201Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**PurchaseShip201ResponseData**](PurchaseShip201ResponseData.md) |  | 
+**data** | [**PurchaseShip201ResponseData**](PurchaseShip201ResponseData.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ purchase_ship201_response_dict = purchase_ship201_response_instance.to_dict()
 # create an instance of PurchaseShip201Response from a dict
 purchase_ship201_response_form_dict = purchase_ship201_response.from_dict(purchase_ship201_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

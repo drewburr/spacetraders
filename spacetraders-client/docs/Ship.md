@@ -6,18 +6,18 @@ Ship details.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | The globally unique identifier of the ship in the following format: &#x60;[AGENT_SYMBOL]-[HEX_ID]&#x60; | 
-**registration** | [**ShipRegistration**](ShipRegistration.md) |  | 
-**nav** | [**ShipNav**](ShipNav.md) |  | 
-**crew** | [**ShipCrew**](ShipCrew.md) |  | 
-**frame** | [**ShipFrame**](ShipFrame.md) |  | 
-**reactor** | [**ShipReactor**](ShipReactor.md) |  | 
-**engine** | [**ShipEngine**](ShipEngine.md) |  | 
-**cooldown** | [**Cooldown**](Cooldown.md) |  | 
-**modules** | [**List[ShipModule]**](ShipModule.md) | Modules installed in this ship. | 
-**mounts** | [**List[ShipMount]**](ShipMount.md) | Mounts installed in this ship. | 
-**cargo** | [**ShipCargo**](ShipCargo.md) |  | 
-**fuel** | [**ShipFuel**](ShipFuel.md) |  | 
+**symbol** | **str** | The globally unique identifier of the ship in the following format: &#x60;[AGENT_SYMBOL]-[HEX_ID]&#x60; |
+**registration** | [**ShipRegistration**](ShipRegistration.md) |  |
+**nav** | [**ShipNav**](ShipNav.md) |  |
+**crew** | [**ShipCrew**](ShipCrew.md) |  |
+**frame** | [**ShipFrame**](ShipFrame.md) |  |
+**reactor** | [**ShipReactor**](ShipReactor.md) |  |
+**engine** | [**ShipEngine**](ShipEngine.md) |  |
+**cooldown** | [**Cooldown**](Cooldown.md) |  |
+**modules** | [**List[ShipModule]**](ShipModule.md) | Modules installed in this ship. |
+**mounts** | [**List[ShipMount]**](ShipMount.md) | Mounts installed in this ship. |
+**cargo** | [**ShipCargo**](ShipCargo.md) |  |
+**fuel** | [**ShipFuel**](ShipFuel.md) |  |
 
 ## Example
 
@@ -36,6 +36,5 @@ ship_dict = ship_instance.to_dict()
 # create an instance of Ship from a dict
 ship_form_dict = ship.from_dict(ship_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

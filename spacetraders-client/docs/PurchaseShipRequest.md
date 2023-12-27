@@ -1,12 +1,11 @@
 # PurchaseShipRequest
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ship_type** | [**ShipType**](ShipType.md) |  | 
-**waypoint_symbol** | **str** | The symbol of the waypoint you want to purchase the ship at. | 
+**ship_type** | [**ShipType**](ShipType.md) |  |
+**waypoint_symbol** | **str** | The symbol of the waypoint you want to purchase the ship at. |
 
 ## Example
 
@@ -25,6 +24,5 @@ purchase_ship_request_dict = purchase_ship_request_instance.to_dict()
 # create an instance of PurchaseShipRequest from a dict
 purchase_ship_request_form_dict = purchase_ship_request.from_dict(purchase_ship_request_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

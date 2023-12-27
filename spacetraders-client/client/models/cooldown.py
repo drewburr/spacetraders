@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -23,27 +23,45 @@ from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import BaseModel
 from pydantic import Field
 from typing_extensions import Annotated
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class Cooldown(BaseModel):
     """
     A cooldown is a period of time in which a ship cannot perform certain actions.
-    """ # noqa: E501
-    ship_symbol: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The symbol of the ship that is on cooldown", alias="shipSymbol")
-    total_seconds: Annotated[int, Field(strict=True, ge=0)] = Field(description="The total duration of the cooldown in seconds", alias="totalSeconds")
-    remaining_seconds: Annotated[int, Field(strict=True, ge=0)] = Field(description="The remaining duration of the cooldown in seconds", alias="remainingSeconds")
-    expiration: Optional[datetime] = Field(default=None, description="The date and time when the cooldown expires in ISO 8601 format")
-    __properties: ClassVar[List[str]] = ["shipSymbol", "totalSeconds", "remainingSeconds", "expiration"]
+    """  # noqa: E501
+
+    ship_symbol: Annotated[str, Field(min_length=1, strict=True)] = Field(
+        description="The symbol of the ship that is on cooldown", alias="shipSymbol"
+    )
+    total_seconds: Annotated[int, Field(strict=True, ge=0)] = Field(
+        description="The total duration of the cooldown in seconds",
+        alias="totalSeconds",
+    )
+    remaining_seconds: Annotated[int, Field(strict=True, ge=0)] = Field(
+        description="The remaining duration of the cooldown in seconds",
+        alias="remainingSeconds",
+    )
+    expiration: Optional[datetime] = Field(
+        default=None,
+        description="The date and time when the cooldown expires in ISO 8601 format",
+    )
+    __properties: ClassVar[List[str]] = [
+        "shipSymbol",
+        "totalSeconds",
+        "remainingSeconds",
+        "expiration",
+    ]
 
     model_config = {
         "populate_by_name": True,
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -71,8 +89,7 @@ class Cooldown(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         return _dict
@@ -86,12 +103,12 @@ class Cooldown(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "shipSymbol": obj.get("shipSymbol"),
-            "totalSeconds": obj.get("totalSeconds"),
-            "remainingSeconds": obj.get("remainingSeconds"),
-            "expiration": obj.get("expiration")
-        })
+        _obj = cls.model_validate(
+            {
+                "shipSymbol": obj.get("shipSymbol"),
+                "totalSeconds": obj.get("totalSeconds"),
+                "remainingSeconds": obj.get("remainingSeconds"),
+                "expiration": obj.get("expiration"),
+            }
+        )
         return _obj
-
-

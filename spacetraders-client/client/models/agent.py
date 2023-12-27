@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -23,29 +23,52 @@ from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import BaseModel, StrictInt
 from pydantic import Field
 from typing_extensions import Annotated
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class Agent(BaseModel):
     """
     Agent details.
-    """ # noqa: E501
-    account_id: Optional[Annotated[str, Field(min_length=1, strict=True)]] = Field(default=None, description="Account ID that is tied to this agent. Only included on your own agent.", alias="accountId")
-    symbol: Annotated[str, Field(min_length=3, strict=True, max_length=14)] = Field(description="Symbol of the agent.")
-    headquarters: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The headquarters of the agent.")
-    credits: StrictInt = Field(description="The number of credits the agent has available. Credits can be negative if funds have been overdrawn.")
-    starting_faction: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The faction the agent started with.", alias="startingFaction")
-    ship_count: StrictInt = Field(description="How many ships are owned by the agent.", alias="shipCount")
-    __properties: ClassVar[List[str]] = ["accountId", "symbol", "headquarters", "credits", "startingFaction", "shipCount"]
+    """  # noqa: E501
+
+    account_id: Optional[Annotated[str, Field(min_length=1, strict=True)]] = Field(
+        default=None,
+        description="Account ID that is tied to this agent. Only included on your own agent.",
+        alias="accountId",
+    )
+    symbol: Annotated[str, Field(min_length=3, strict=True, max_length=14)] = Field(
+        description="Symbol of the agent."
+    )
+    headquarters: Annotated[str, Field(min_length=1, strict=True)] = Field(
+        description="The headquarters of the agent."
+    )
+    credits: StrictInt = Field(
+        description="The number of credits the agent has available. Credits can be negative if funds have been overdrawn."
+    )
+    starting_faction: Annotated[str, Field(min_length=1, strict=True)] = Field(
+        description="The faction the agent started with.", alias="startingFaction"
+    )
+    ship_count: StrictInt = Field(
+        description="How many ships are owned by the agent.", alias="shipCount"
+    )
+    __properties: ClassVar[List[str]] = [
+        "accountId",
+        "symbol",
+        "headquarters",
+        "credits",
+        "startingFaction",
+        "shipCount",
+    ]
 
     model_config = {
         "populate_by_name": True,
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -73,8 +96,7 @@ class Agent(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         return _dict
@@ -88,14 +110,14 @@ class Agent(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "accountId": obj.get("accountId"),
-            "symbol": obj.get("symbol"),
-            "headquarters": obj.get("headquarters"),
-            "credits": obj.get("credits"),
-            "startingFaction": obj.get("startingFaction"),
-            "shipCount": obj.get("shipCount")
-        })
+        _obj = cls.model_validate(
+            {
+                "accountId": obj.get("accountId"),
+                "symbol": obj.get("symbol"),
+                "headquarters": obj.get("headquarters"),
+                "credits": obj.get("credits"),
+                "startingFaction": obj.get("startingFaction"),
+                "shipCount": obj.get("shipCount"),
+            }
+        )
         return _obj
-
-

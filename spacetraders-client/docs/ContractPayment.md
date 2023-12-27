@@ -6,8 +6,8 @@ Payments for the contract.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**on_accepted** | **int** | The amount of credits received up front for accepting the contract. | 
-**on_fulfilled** | **int** | The amount of credits received when the contract is fulfilled. | 
+**on_accepted** | **int** | The amount of credits received up front for accepting the contract. |
+**on_fulfilled** | **int** | The amount of credits received when the contract is fulfilled. |
 
 ## Example
 
@@ -26,6 +26,5 @@ contract_payment_dict = contract_payment_instance.to_dict()
 # create an instance of ContractPayment from a dict
 contract_payment_form_dict = contract_payment.from_dict(contract_payment_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

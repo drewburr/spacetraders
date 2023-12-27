@@ -1,12 +1,10 @@
 # JumpShip200Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**JumpShip200ResponseData**](JumpShip200ResponseData.md) |  | 
+**data** | [**JumpShip200ResponseData**](JumpShip200ResponseData.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ jump_ship200_response_dict = jump_ship200_response_instance.to_dict()
 # create an instance of JumpShip200Response from a dict
 jump_ship200_response_form_dict = jump_ship200_response.from_dict(jump_ship200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

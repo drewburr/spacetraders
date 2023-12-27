@@ -1,11 +1,10 @@
 # CreateShipWaypointScan201Response
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**CreateShipWaypointScan201ResponseData**](CreateShipWaypointScan201ResponseData.md) |  | 
+**data** | [**CreateShipWaypointScan201ResponseData**](CreateShipWaypointScan201ResponseData.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ create_ship_waypoint_scan201_response_dict = create_ship_waypoint_scan201_respon
 # create an instance of CreateShipWaypointScan201Response from a dict
 create_ship_waypoint_scan201_response_form_dict = create_ship_waypoint_scan201_response.from_dict(create_ship_waypoint_scan201_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

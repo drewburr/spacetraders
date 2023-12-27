@@ -1,12 +1,11 @@
 # GetStatus200ResponseServerResets
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**next** | **str** | The date and time when the game server will reset. | 
-**frequency** | **str** | How often we intend to reset the game server. | 
+**next** | **str** | The date and time when the game server will reset. |
+**frequency** | **str** | How often we intend to reset the game server. |
 
 ## Example
 
@@ -25,6 +24,5 @@ get_status200_response_server_resets_dict = get_status200_response_server_resets
 # create an instance of GetStatus200ResponseServerResets from a dict
 get_status200_response_server_resets_form_dict = get_status200_response_server_resets.from_dict(get_status200_response_server_resets_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

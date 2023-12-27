@@ -1,12 +1,11 @@
 # CreateShipWaypointScan201ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cooldown** | [**Cooldown**](Cooldown.md) |  | 
-**waypoints** | [**List[ScannedWaypoint]**](ScannedWaypoint.md) | List of scanned waypoints. | 
+**cooldown** | [**Cooldown**](Cooldown.md) |  |
+**waypoints** | [**List[ScannedWaypoint]**](ScannedWaypoint.md) | List of scanned waypoints. |
 
 ## Example
 
@@ -25,6 +24,5 @@ create_ship_waypoint_scan201_response_data_dict = create_ship_waypoint_scan201_r
 # create an instance of CreateShipWaypointScan201ResponseData from a dict
 create_ship_waypoint_scan201_response_data_form_dict = create_ship_waypoint_scan201_response_data.from_dict(create_ship_waypoint_scan201_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -6,9 +6,9 @@ Ship cargo details.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**capacity** | **int** | The max number of items that can be stored in the cargo hold. | 
-**units** | **int** | The number of items currently stored in the cargo hold. | 
-**inventory** | [**List[ShipCargoItem]**](ShipCargoItem.md) | The items currently in the cargo hold. | 
+**capacity** | **int** | The max number of items that can be stored in the cargo hold. |
+**units** | **int** | The number of items currently stored in the cargo hold. |
+**inventory** | [**List[ShipCargoItem]**](ShipCargoItem.md) | The items currently in the cargo hold. |
 
 ## Example
 
@@ -27,6 +27,5 @@ ship_cargo_dict = ship_cargo_instance.to_dict()
 # create an instance of ShipCargo from a dict
 ship_cargo_form_dict = ship_cargo.from_dict(ship_cargo_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

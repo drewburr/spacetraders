@@ -1,11 +1,10 @@
 # SystemFaction
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**FactionSymbol**](FactionSymbol.md) |  | 
+**symbol** | [**FactionSymbol**](FactionSymbol.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ system_faction_dict = system_faction_instance.to_dict()
 # create an instance of SystemFaction from a dict
 system_faction_form_dict = system_faction.from_dict(system_faction_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

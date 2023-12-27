@@ -6,9 +6,9 @@ The public registration information of the ship
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | The agent&#39;s registered name of the ship | 
-**faction_symbol** | **str** | The symbol of the faction the ship is registered with | 
-**role** | [**ShipRole**](ShipRole.md) |  | 
+**name** | **str** | The agent&#39;s registered name of the ship |
+**faction_symbol** | **str** | The symbol of the faction the ship is registered with |
+**role** | [**ShipRole**](ShipRole.md) |  |
 
 ## Example
 
@@ -27,6 +27,5 @@ ship_registration_dict = ship_registration_instance.to_dict()
 # create an instance of ShipRegistration from a dict
 ship_registration_form_dict = ship_registration.from_dict(ship_registration_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

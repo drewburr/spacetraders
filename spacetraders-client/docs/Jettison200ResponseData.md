@@ -1,11 +1,10 @@
 # Jettison200ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cargo** | [**ShipCargo**](ShipCargo.md) |  | 
+**cargo** | [**ShipCargo**](ShipCargo.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ jettison200_response_data_dict = jettison200_response_data_instance.to_dict()
 # create an instance of Jettison200ResponseData from a dict
 jettison200_response_data_form_dict = jettison200_response_data.from_dict(jettison200_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

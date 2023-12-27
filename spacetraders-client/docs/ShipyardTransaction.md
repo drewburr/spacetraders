@@ -6,12 +6,12 @@ Results of a transaction with a shipyard.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**waypoint_symbol** | **str** | The symbol of the waypoint. | 
-**ship_symbol** | **str** | The symbol of the ship that was the subject of the transaction. | 
-**ship_type** | **str** | The symbol of the ship that was the subject of the transaction. | 
-**price** | **int** | The price of the transaction. | 
-**agent_symbol** | **str** | The symbol of the agent that made the transaction. | 
-**timestamp** | **datetime** | The timestamp of the transaction. | 
+**waypoint_symbol** | **str** | The symbol of the waypoint. |
+**ship_symbol** | **str** | The symbol of the ship that was the subject of the transaction. |
+**ship_type** | **str** | The symbol of the ship that was the subject of the transaction. |
+**price** | **int** | The price of the transaction. |
+**agent_symbol** | **str** | The symbol of the agent that made the transaction. |
+**timestamp** | **datetime** | The timestamp of the transaction. |
 
 ## Example
 
@@ -30,6 +30,5 @@ shipyard_transaction_dict = shipyard_transaction_instance.to_dict()
 # create an instance of ShipyardTransaction from a dict
 shipyard_transaction_form_dict = shipyard_transaction.from_dict(shipyard_transaction_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

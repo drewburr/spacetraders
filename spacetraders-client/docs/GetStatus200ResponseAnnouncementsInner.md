@@ -1,12 +1,11 @@
 # GetStatus200ResponseAnnouncementsInner
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | **str** |  | 
-**body** | **str** |  | 
+**title** | **str** |  |
+**body** | **str** |  |
 
 ## Example
 
@@ -25,6 +24,5 @@ get_status200_response_announcements_inner_dict = get_status200_response_announc
 # create an instance of GetStatus200ResponseAnnouncementsInner from a dict
 get_status200_response_announcements_inner_form_dict = get_status200_response_announcements_inner.from_dict(get_status200_response_announcements_inner_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

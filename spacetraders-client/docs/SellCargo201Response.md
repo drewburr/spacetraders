@@ -1,12 +1,10 @@
 # SellCargo201Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**SellCargo201ResponseData**](SellCargo201ResponseData.md) |  | 
+**data** | [**SellCargo201ResponseData**](SellCargo201ResponseData.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ sell_cargo201_response_dict = sell_cargo201_response_instance.to_dict()
 # create an instance of SellCargo201Response from a dict
 sell_cargo201_response_form_dict = sell_cargo201_response.from_dict(sell_cargo201_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

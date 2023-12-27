@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -23,15 +23,18 @@ from typing import Any, ClassVar, Dict, List
 from pydantic import BaseModel
 from client.models.ship_fuel import ShipFuel
 from client.models.ship_nav import ShipNav
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class NavigateShip200ResponseData(BaseModel):
     """
     NavigateShip200ResponseData
-    """ # noqa: E501
+    """  # noqa: E501
+
     fuel: ShipFuel
     nav: ShipNav
     __properties: ClassVar[List[str]] = ["fuel", "nav"]
@@ -41,7 +44,6 @@ class NavigateShip200ResponseData(BaseModel):
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -69,16 +71,15 @@ class NavigateShip200ResponseData(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of fuel
         if self.fuel:
-            _dict['fuel'] = self.fuel.to_dict()
+            _dict["fuel"] = self.fuel.to_dict()
         # override the default output from pydantic by calling `to_dict()` of nav
         if self.nav:
-            _dict['nav'] = self.nav.to_dict()
+            _dict["nav"] = self.nav.to_dict()
         return _dict
 
     @classmethod
@@ -90,10 +91,14 @@ class NavigateShip200ResponseData(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "fuel": ShipFuel.from_dict(obj.get("fuel")) if obj.get("fuel") is not None else None,
-            "nav": ShipNav.from_dict(obj.get("nav")) if obj.get("nav") is not None else None
-        })
+        _obj = cls.model_validate(
+            {
+                "fuel": ShipFuel.from_dict(obj.get("fuel"))
+                if obj.get("fuel") is not None
+                else None,
+                "nav": ShipNav.from_dict(obj.get("nav"))
+                if obj.get("nav") is not None
+                else None,
+            }
+        )
         return _obj
-
-

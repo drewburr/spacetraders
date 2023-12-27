@@ -6,9 +6,9 @@ Details of the ship's fuel tanks including how much fuel was consumed during the
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**current** | **int** | The current amount of fuel in the ship&#39;s tanks. | 
-**capacity** | **int** | The maximum amount of fuel the ship&#39;s tanks can hold. | 
-**consumed** | [**ShipFuelConsumed**](ShipFuelConsumed.md) |  | [optional] 
+**current** | **int** | The current amount of fuel in the ship&#39;s tanks. |
+**capacity** | **int** | The maximum amount of fuel the ship&#39;s tanks can hold. |
+**consumed** | [**ShipFuelConsumed**](ShipFuelConsumed.md) |  | [optional]
 
 ## Example
 
@@ -27,6 +27,5 @@ ship_fuel_dict = ship_fuel_instance.to_dict()
 # create an instance of ShipFuel from a dict
 ship_fuel_form_dict = ship_fuel.from_dict(ship_fuel_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -1,12 +1,10 @@
 # GetWaypoint200Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Waypoint**](Waypoint.md) |  | 
+**data** | [**Waypoint**](Waypoint.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ get_waypoint200_response_dict = get_waypoint200_response_instance.to_dict()
 # create an instance of GetWaypoint200Response from a dict
 get_waypoint200_response_form_dict = get_waypoint200_response.from_dict(get_waypoint200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

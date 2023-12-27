@@ -1,12 +1,10 @@
 # GetShipCooldown200Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Cooldown**](Cooldown.md) |  | 
+**data** | [**Cooldown**](Cooldown.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ get_ship_cooldown200_response_dict = get_ship_cooldown200_response_instance.to_d
 # create an instance of GetShipCooldown200Response from a dict
 get_ship_cooldown200_response_form_dict = get_ship_cooldown200_response.from_dict(get_ship_cooldown200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

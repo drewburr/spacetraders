@@ -1,12 +1,10 @@
 # ExtractResources201Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**ExtractResources201ResponseData**](ExtractResources201ResponseData.md) |  | 
+**data** | [**ExtractResources201ResponseData**](ExtractResources201ResponseData.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ extract_resources201_response_dict = extract_resources201_response_instance.to_d
 # create an instance of ExtractResources201Response from a dict
 extract_resources201_response_form_dict = extract_resources201_response.from_dict(extract_resources201_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

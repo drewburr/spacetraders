@@ -6,10 +6,10 @@ The type of cargo item and the number of units.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | [**TradeSymbol**](TradeSymbol.md) |  | 
-**name** | **str** | The name of the cargo item type. | 
-**description** | **str** | The description of the cargo item type. | 
-**units** | **int** | The number of units of the cargo item. | 
+**symbol** | [**TradeSymbol**](TradeSymbol.md) |  |
+**name** | **str** | The name of the cargo item type. |
+**description** | **str** | The description of the cargo item type. |
+**units** | **int** | The number of units of the cargo item. |
 
 ## Example
 
@@ -28,6 +28,5 @@ ship_cargo_item_dict = ship_cargo_item_instance.to_dict()
 # create an instance of ShipCargoItem from a dict
 ship_cargo_item_form_dict = ship_cargo_item.from_dict(ship_cargo_item_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

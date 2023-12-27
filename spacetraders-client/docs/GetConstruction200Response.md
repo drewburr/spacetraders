@@ -1,12 +1,10 @@
 # GetConstruction200Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Construction**](Construction.md) |  | 
+**data** | [**Construction**](Construction.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ get_construction200_response_dict = get_construction200_response_instance.to_dic
 # create an instance of GetConstruction200Response from a dict
 get_construction200_response_form_dict = get_construction200_response.from_dict(get_construction200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -1,17 +1,16 @@
 # System
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | The symbol of the system. | 
-**sector_symbol** | **str** | The symbol of the sector. | 
-**type** | [**SystemType**](SystemType.md) |  | 
-**x** | **int** | Relative position of the system in the sector in the x axis. | 
-**y** | **int** | Relative position of the system in the sector in the y axis. | 
-**waypoints** | [**List[SystemWaypoint]**](SystemWaypoint.md) | Waypoints in this system. | 
-**factions** | [**List[SystemFaction]**](SystemFaction.md) | Factions that control this system. | 
+**symbol** | **str** | The symbol of the system. |
+**sector_symbol** | **str** | The symbol of the sector. |
+**type** | [**SystemType**](SystemType.md) |  |
+**x** | **int** | Relative position of the system in the sector in the x axis. |
+**y** | **int** | Relative position of the system in the sector in the y axis. |
+**waypoints** | [**List[SystemWaypoint]**](SystemWaypoint.md) | Waypoints in this system. |
+**factions** | [**List[SystemFaction]**](SystemFaction.md) | Factions that control this system. |
 
 ## Example
 
@@ -30,6 +29,5 @@ system_dict = system_instance.to_dict()
 # create an instance of System from a dict
 system_form_dict = system.from_dict(system_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

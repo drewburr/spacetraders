@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -24,30 +24,72 @@ from pydantic import BaseModel, StrictStr, field_validator
 from pydantic import Field
 from typing_extensions import Annotated
 from client.models.ship_requirements import ShipRequirements
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class ShipFrame(BaseModel):
     """
     The frame of the ship. The frame determines the number of modules and mounting points of the ship, as well as base fuel capacity. As the condition of the frame takes more wear, the ship will become more sluggish and less maneuverable.
-    """ # noqa: E501
+    """  # noqa: E501
+
     symbol: StrictStr = Field(description="Symbol of the frame.")
     name: StrictStr = Field(description="Name of the frame.")
     description: StrictStr = Field(description="Description of the frame.")
-    condition: Optional[Annotated[int, Field(le=100, strict=True, ge=0)]] = Field(default=None, description="Condition is a range of 0 to 100 where 0 is completely worn out and 100 is brand new.")
-    module_slots: Annotated[int, Field(strict=True, ge=0)] = Field(description="The amount of slots that can be dedicated to modules installed in the ship. Each installed module take up a number of slots, and once there are no more slots, no new modules can be installed.", alias="moduleSlots")
-    mounting_points: Annotated[int, Field(strict=True, ge=0)] = Field(description="The amount of slots that can be dedicated to mounts installed in the ship. Each installed mount takes up a number of points, and once there are no more points remaining, no new mounts can be installed.", alias="mountingPoints")
-    fuel_capacity: Annotated[int, Field(strict=True, ge=0)] = Field(description="The maximum amount of fuel that can be stored in this ship. When refueling, the ship will be refueled to this amount.", alias="fuelCapacity")
+    condition: Optional[Annotated[int, Field(le=100, strict=True, ge=0)]] = Field(
+        default=None,
+        description="Condition is a range of 0 to 100 where 0 is completely worn out and 100 is brand new.",
+    )
+    module_slots: Annotated[int, Field(strict=True, ge=0)] = Field(
+        description="The amount of slots that can be dedicated to modules installed in the ship. Each installed module take up a number of slots, and once there are no more slots, no new modules can be installed.",
+        alias="moduleSlots",
+    )
+    mounting_points: Annotated[int, Field(strict=True, ge=0)] = Field(
+        description="The amount of slots that can be dedicated to mounts installed in the ship. Each installed mount takes up a number of points, and once there are no more points remaining, no new mounts can be installed.",
+        alias="mountingPoints",
+    )
+    fuel_capacity: Annotated[int, Field(strict=True, ge=0)] = Field(
+        description="The maximum amount of fuel that can be stored in this ship. When refueling, the ship will be refueled to this amount.",
+        alias="fuelCapacity",
+    )
     requirements: ShipRequirements
-    __properties: ClassVar[List[str]] = ["symbol", "name", "description", "condition", "moduleSlots", "mountingPoints", "fuelCapacity", "requirements"]
+    __properties: ClassVar[List[str]] = [
+        "symbol",
+        "name",
+        "description",
+        "condition",
+        "moduleSlots",
+        "mountingPoints",
+        "fuelCapacity",
+        "requirements",
+    ]
 
-    @field_validator('symbol')
+    @field_validator("symbol")
     def symbol_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('FRAME_PROBE', 'FRAME_DRONE', 'FRAME_INTERCEPTOR', 'FRAME_RACER', 'FRAME_FIGHTER', 'FRAME_FRIGATE', 'FRAME_SHUTTLE', 'FRAME_EXPLORER', 'FRAME_MINER', 'FRAME_LIGHT_FREIGHTER', 'FRAME_HEAVY_FREIGHTER', 'FRAME_TRANSPORT', 'FRAME_DESTROYER', 'FRAME_CRUISER', 'FRAME_CARRIER'):
-            raise ValueError("must be one of enum values ('FRAME_PROBE', 'FRAME_DRONE', 'FRAME_INTERCEPTOR', 'FRAME_RACER', 'FRAME_FIGHTER', 'FRAME_FRIGATE', 'FRAME_SHUTTLE', 'FRAME_EXPLORER', 'FRAME_MINER', 'FRAME_LIGHT_FREIGHTER', 'FRAME_HEAVY_FREIGHTER', 'FRAME_TRANSPORT', 'FRAME_DESTROYER', 'FRAME_CRUISER', 'FRAME_CARRIER')")
+        if value not in (
+            "FRAME_PROBE",
+            "FRAME_DRONE",
+            "FRAME_INTERCEPTOR",
+            "FRAME_RACER",
+            "FRAME_FIGHTER",
+            "FRAME_FRIGATE",
+            "FRAME_SHUTTLE",
+            "FRAME_EXPLORER",
+            "FRAME_MINER",
+            "FRAME_LIGHT_FREIGHTER",
+            "FRAME_HEAVY_FREIGHTER",
+            "FRAME_TRANSPORT",
+            "FRAME_DESTROYER",
+            "FRAME_CRUISER",
+            "FRAME_CARRIER",
+        ):
+            raise ValueError(
+                "must be one of enum values ('FRAME_PROBE', 'FRAME_DRONE', 'FRAME_INTERCEPTOR', 'FRAME_RACER', 'FRAME_FIGHTER', 'FRAME_FRIGATE', 'FRAME_SHUTTLE', 'FRAME_EXPLORER', 'FRAME_MINER', 'FRAME_LIGHT_FREIGHTER', 'FRAME_HEAVY_FREIGHTER', 'FRAME_TRANSPORT', 'FRAME_DESTROYER', 'FRAME_CRUISER', 'FRAME_CARRIER')"
+            )
         return value
 
     model_config = {
@@ -55,7 +97,6 @@ class ShipFrame(BaseModel):
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -83,13 +124,12 @@ class ShipFrame(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of requirements
         if self.requirements:
-            _dict['requirements'] = self.requirements.to_dict()
+            _dict["requirements"] = self.requirements.to_dict()
         return _dict
 
     @classmethod
@@ -101,16 +141,18 @@ class ShipFrame(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "symbol": obj.get("symbol"),
-            "name": obj.get("name"),
-            "description": obj.get("description"),
-            "condition": obj.get("condition"),
-            "moduleSlots": obj.get("moduleSlots"),
-            "mountingPoints": obj.get("mountingPoints"),
-            "fuelCapacity": obj.get("fuelCapacity"),
-            "requirements": ShipRequirements.from_dict(obj.get("requirements")) if obj.get("requirements") is not None else None
-        })
+        _obj = cls.model_validate(
+            {
+                "symbol": obj.get("symbol"),
+                "name": obj.get("name"),
+                "description": obj.get("description"),
+                "condition": obj.get("condition"),
+                "moduleSlots": obj.get("moduleSlots"),
+                "mountingPoints": obj.get("mountingPoints"),
+                "fuelCapacity": obj.get("fuelCapacity"),
+                "requirements": ShipRequirements.from_dict(obj.get("requirements"))
+                if obj.get("requirements") is not None
+                else None,
+            }
+        )
         return _obj
-
-

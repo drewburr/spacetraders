@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -26,28 +26,40 @@ from typing_extensions import Annotated
 from client.models.ship_nav_flight_mode import ShipNavFlightMode
 from client.models.ship_nav_route import ShipNavRoute
 from client.models.ship_nav_status import ShipNavStatus
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class ShipNav(BaseModel):
     """
     The navigation information of the ship.
-    """ # noqa: E501
-    system_symbol: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The symbol of the system.", alias="systemSymbol")
-    waypoint_symbol: Annotated[str, Field(min_length=1, strict=True)] = Field(description="The symbol of the waypoint.", alias="waypointSymbol")
+    """  # noqa: E501
+
+    system_symbol: Annotated[str, Field(min_length=1, strict=True)] = Field(
+        description="The symbol of the system.", alias="systemSymbol"
+    )
+    waypoint_symbol: Annotated[str, Field(min_length=1, strict=True)] = Field(
+        description="The symbol of the waypoint.", alias="waypointSymbol"
+    )
     route: ShipNavRoute
     status: ShipNavStatus
     flight_mode: ShipNavFlightMode = Field(alias="flightMode")
-    __properties: ClassVar[List[str]] = ["systemSymbol", "waypointSymbol", "route", "status", "flightMode"]
+    __properties: ClassVar[List[str]] = [
+        "systemSymbol",
+        "waypointSymbol",
+        "route",
+        "status",
+        "flightMode",
+    ]
 
     model_config = {
         "populate_by_name": True,
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -75,13 +87,12 @@ class ShipNav(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of route
         if self.route:
-            _dict['route'] = self.route.to_dict()
+            _dict["route"] = self.route.to_dict()
         return _dict
 
     @classmethod
@@ -93,13 +104,15 @@ class ShipNav(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "systemSymbol": obj.get("systemSymbol"),
-            "waypointSymbol": obj.get("waypointSymbol"),
-            "route": ShipNavRoute.from_dict(obj.get("route")) if obj.get("route") is not None else None,
-            "status": obj.get("status"),
-            "flightMode": obj.get("flightMode")
-        })
+        _obj = cls.model_validate(
+            {
+                "systemSymbol": obj.get("systemSymbol"),
+                "waypointSymbol": obj.get("waypointSymbol"),
+                "route": ShipNavRoute.from_dict(obj.get("route"))
+                if obj.get("route") is not None
+                else None,
+                "status": obj.get("status"),
+                "flightMode": obj.get("flightMode"),
+            }
+        )
         return _obj
-
-

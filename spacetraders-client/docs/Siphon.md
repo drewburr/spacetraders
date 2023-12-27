@@ -6,8 +6,8 @@ Siphon details.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ship_symbol** | **str** | Symbol of the ship that executed the siphon. | 
-**var_yield** | [**SiphonYield**](SiphonYield.md) |  | 
+**ship_symbol** | **str** | Symbol of the ship that executed the siphon. |
+**var_yield** | [**SiphonYield**](SiphonYield.md) |  |
 
 ## Example
 
@@ -26,6 +26,5 @@ siphon_dict = siphon_instance.to_dict()
 # create an instance of Siphon from a dict
 siphon_form_dict = siphon.from_dict(siphon_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

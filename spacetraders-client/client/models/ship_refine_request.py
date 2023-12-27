@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -22,23 +22,40 @@ import json
 from typing import Any, ClassVar, Dict, List
 from pydantic import BaseModel, StrictStr, field_validator
 from pydantic import Field
+
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
+
 class ShipRefineRequest(BaseModel):
     """
     ShipRefineRequest
-    """ # noqa: E501
-    produce: StrictStr = Field(description="The type of good to produce out of the refining process.")
+    """  # noqa: E501
+
+    produce: StrictStr = Field(
+        description="The type of good to produce out of the refining process."
+    )
     __properties: ClassVar[List[str]] = ["produce"]
 
-    @field_validator('produce')
+    @field_validator("produce")
     def produce_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('IRON', 'COPPER', 'SILVER', 'GOLD', 'ALUMINUM', 'PLATINUM', 'URANITE', 'MERITIUM', 'FUEL'):
-            raise ValueError("must be one of enum values ('IRON', 'COPPER', 'SILVER', 'GOLD', 'ALUMINUM', 'PLATINUM', 'URANITE', 'MERITIUM', 'FUEL')")
+        if value not in (
+            "IRON",
+            "COPPER",
+            "SILVER",
+            "GOLD",
+            "ALUMINUM",
+            "PLATINUM",
+            "URANITE",
+            "MERITIUM",
+            "FUEL",
+        ):
+            raise ValueError(
+                "must be one of enum values ('IRON', 'COPPER', 'SILVER', 'GOLD', 'ALUMINUM', 'PLATINUM', 'URANITE', 'MERITIUM', 'FUEL')"
+            )
         return value
 
     model_config = {
@@ -46,7 +63,6 @@ class ShipRefineRequest(BaseModel):
         "validate_assignment": True,
         "protected_namespaces": (),
     }
-
 
     def to_str(self) -> str:
         """Returns the string representation of the model using alias"""
@@ -74,8 +90,7 @@ class ShipRefineRequest(BaseModel):
         """
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude={},
             exclude_none=True,
         )
         return _dict
@@ -89,9 +104,5 @@ class ShipRefineRequest(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({
-            "produce": obj.get("produce")
-        })
+        _obj = cls.model_validate({"produce": obj.get("produce")})
         return _obj
-
-

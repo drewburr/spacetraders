@@ -1,11 +1,10 @@
 # ShipRefineRequest
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**produce** | **str** | The type of good to produce out of the refining process. | 
+**produce** | **str** | The type of good to produce out of the refining process. |
 
 ## Example
 
@@ -24,6 +23,5 @@ ship_refine_request_dict = ship_refine_request_instance.to_dict()
 # create an instance of ShipRefineRequest from a dict
 ship_refine_request_form_dict = ship_refine_request.from_dict(ship_refine_request_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

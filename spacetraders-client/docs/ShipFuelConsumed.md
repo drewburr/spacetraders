@@ -6,8 +6,8 @@ An object that only shows up when an action has consumed fuel in the process. Sh
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | **int** | The amount of fuel consumed by the most recent transit or action. | 
-**timestamp** | **datetime** | The time at which the fuel was consumed. | 
+**amount** | **int** | The amount of fuel consumed by the most recent transit or action. |
+**timestamp** | **datetime** | The time at which the fuel was consumed. |
 
 ## Example
 
@@ -26,6 +26,5 @@ ship_fuel_consumed_dict = ship_fuel_consumed_instance.to_dict()
 # create an instance of ShipFuelConsumed from a dict
 ship_fuel_consumed_form_dict = ship_fuel_consumed.from_dict(ship_fuel_consumed_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

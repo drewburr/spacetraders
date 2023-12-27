@@ -1,6 +1,5 @@
 # GetSystemWaypointsTraitsParameter
 
-
 ## Properties
 
 Name | Type | Description | Notes
@@ -23,6 +22,5 @@ get_system_waypoints_traits_parameter_dict = get_system_waypoints_traits_paramet
 # create an instance of GetSystemWaypointsTraitsParameter from a dict
 get_system_waypoints_traits_parameter_form_dict = get_system_waypoints_traits_parameter.from_dict(get_system_waypoints_traits_parameter_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -1,13 +1,12 @@
 # SiphonResources201ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cooldown** | [**Cooldown**](Cooldown.md) |  | 
-**siphon** | [**Siphon**](Siphon.md) |  | 
-**cargo** | [**ShipCargo**](ShipCargo.md) |  | 
+**cooldown** | [**Cooldown**](Cooldown.md) |  |
+**siphon** | [**Siphon**](Siphon.md) |  |
+**cargo** | [**ShipCargo**](ShipCargo.md) |  |
 
 ## Example
 
@@ -26,6 +25,5 @@ siphon_resources201_response_data_dict = siphon_resources201_response_data_insta
 # create an instance of SiphonResources201ResponseData from a dict
 siphon_resources201_response_data_form_dict = siphon_resources201_response_data.from_dict(siphon_resources201_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

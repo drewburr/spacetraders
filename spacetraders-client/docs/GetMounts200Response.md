@@ -1,12 +1,10 @@
 # GetMounts200Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List[ShipMount]**](ShipMount.md) |  | 
+**data** | [**List[ShipMount]**](ShipMount.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ get_mounts200_response_dict = get_mounts200_response_instance.to_dict()
 # create an instance of GetMounts200Response from a dict
 get_mounts200_response_form_dict = get_mounts200_response.from_dict(get_mounts200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

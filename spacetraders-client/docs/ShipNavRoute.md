@@ -6,10 +6,10 @@ The routing information for the ship's most recent transit or current location.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**destination** | [**ShipNavRouteWaypoint**](ShipNavRouteWaypoint.md) |  | 
-**origin** | [**ShipNavRouteWaypoint**](ShipNavRouteWaypoint.md) |  | 
-**departure_time** | **datetime** | The date time of the ship&#39;s departure. | 
-**arrival** | **datetime** | The date time of the ship&#39;s arrival. If the ship is in-transit, this is the expected time of arrival. | 
+**destination** | [**ShipNavRouteWaypoint**](ShipNavRouteWaypoint.md) |  |
+**origin** | [**ShipNavRouteWaypoint**](ShipNavRouteWaypoint.md) |  |
+**departure_time** | **datetime** | The date time of the ship&#39;s departure. |
+**arrival** | **datetime** | The date time of the ship&#39;s arrival. If the ship is in-transit, this is the expected time of arrival. |
 
 ## Example
 
@@ -28,6 +28,5 @@ ship_nav_route_dict = ship_nav_route_instance.to_dict()
 # create an instance of ShipNavRoute from a dict
 ship_nav_route_form_dict = ship_nav_route.from_dict(ship_nav_route_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

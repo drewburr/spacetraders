@@ -6,7 +6,7 @@ An orbital is another waypoint that orbits a parent waypoint.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | The symbol of the orbiting waypoint. | 
+**symbol** | **str** | The symbol of the orbiting waypoint. |
 
 ## Example
 
@@ -25,6 +25,5 @@ waypoint_orbital_dict = waypoint_orbital_instance.to_dict()
 # create an instance of WaypointOrbital from a dict
 waypoint_orbital_form_dict = waypoint_orbital.from_dict(waypoint_orbital_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

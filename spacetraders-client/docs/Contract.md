@@ -6,14 +6,14 @@ Contract details.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | ID of the contract. | 
-**faction_symbol** | **str** | The symbol of the faction that this contract is for. | 
-**type** | **str** | Type of contract. | 
-**terms** | [**ContractTerms**](ContractTerms.md) |  | 
+**id** | **str** | ID of the contract. |
+**faction_symbol** | **str** | The symbol of the faction that this contract is for. |
+**type** | **str** | Type of contract. |
+**terms** | [**ContractTerms**](ContractTerms.md) |  |
 **accepted** | **bool** | Whether the contract has been accepted by the agent | [default to False]
 **fulfilled** | **bool** | Whether the contract has been fulfilled | [default to False]
-**expiration** | **datetime** | Deprecated in favor of deadlineToAccept | 
-**deadline_to_accept** | **datetime** | The time at which the contract is no longer available to be accepted | [optional] 
+**expiration** | **datetime** | Deprecated in favor of deadlineToAccept |
+**deadline_to_accept** | **datetime** | The time at which the contract is no longer available to be accepted | [optional]
 
 ## Example
 
@@ -32,6 +32,5 @@ contract_dict = contract_instance.to_dict()
 # create an instance of Contract from a dict
 contract_form_dict = contract.from_dict(contract_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

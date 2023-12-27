@@ -1,12 +1,11 @@
 # GetStatus200ResponseLeaderboardsMostCreditsInner
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**agent_symbol** | **str** | Symbol of the agent. | 
-**credits** | **int** | Amount of credits. | 
+**agent_symbol** | **str** | Symbol of the agent. |
+**credits** | **int** | Amount of credits. |
 
 ## Example
 
@@ -25,6 +24,5 @@ get_status200_response_leaderboards_most_credits_inner_dict = get_status200_resp
 # create an instance of GetStatus200ResponseLeaderboardsMostCreditsInner from a dict
 get_status200_response_leaderboards_most_credits_inner_form_dict = get_status200_response_leaderboards_most_credits_inner.from_dict(get_status200_response_leaderboards_most_credits_inner_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

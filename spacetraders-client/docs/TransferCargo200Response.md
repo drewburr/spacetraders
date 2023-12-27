@@ -1,11 +1,10 @@
 # TransferCargo200Response
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Jettison200ResponseData**](Jettison200ResponseData.md) |  | 
+**data** | [**Jettison200ResponseData**](Jettison200ResponseData.md) |  |
 
 ## Example
 
@@ -24,6 +23,5 @@ transfer_cargo200_response_dict = transfer_cargo200_response_instance.to_dict()
 # create an instance of TransferCargo200Response from a dict
 transfer_cargo200_response_form_dict = transfer_cargo200_response.from_dict(transfer_cargo200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

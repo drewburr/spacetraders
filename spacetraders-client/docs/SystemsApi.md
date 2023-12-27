@@ -1,6 +1,6 @@
 # client.SystemsApi
 
-All URIs are relative to *https://api.spacetraders.io/v2*
+All URIs are relative to *<https://api.spacetraders.io/v2>*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [**get_waypoint**](SystemsApi.md#get_waypoint) | **GET** /systems/{systemSymbol}/waypoints/{waypointSymbol} | Get Waypoint
 [**supply_construction**](SystemsApi.md#supply_construction) | **POST** /systems/{systemSymbol}/waypoints/{waypointSymbol}/construction/supply | Supply Construction Site
 
-
 # **get_construction**
+>
 > GetConstruction200Response get_construction(system_symbol, waypoint_symbol)
 
 Get Construction Site
@@ -66,15 +66,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling SystemsApi->get_construction: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **system_symbol** | **str**| The system symbol | 
- **waypoint_symbol** | **str**| The waypoint symbol | 
+ **system_symbol** | **str**| The system symbol |
+ **waypoint_symbol** | **str**| The waypoint symbol |
 
 ### Return type
 
@@ -86,8 +83,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -98,11 +95,12 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_jump_gate**
+>
 > GetJumpGate200Response get_jump_gate(system_symbol, waypoint_symbol)
 
 Get Jump Gate
 
-Get jump gate details for a waypoint. Requires a waypoint of type `JUMP_GATE` to use.  Waypoints connected to this jump gate can be 
+Get jump gate details for a waypoint. Requires a waypoint of type `JUMP_GATE` to use.  Waypoints connected to this jump gate can be
 
 ### Example
 
@@ -148,15 +146,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling SystemsApi->get_jump_gate: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **system_symbol** | **str**| The system symbol | 
- **waypoint_symbol** | **str**| The waypoint symbol | 
+ **system_symbol** | **str**| The system symbol |
+ **waypoint_symbol** | **str**| The waypoint symbol |
 
 ### Return type
 
@@ -168,8 +163,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -180,6 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_market**
+>
 > GetMarket200Response get_market(system_symbol, waypoint_symbol)
 
 Get Market
@@ -230,15 +226,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling SystemsApi->get_market: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **system_symbol** | **str**| The system symbol | 
- **waypoint_symbol** | **str**| The waypoint symbol | 
+ **system_symbol** | **str**| The system symbol |
+ **waypoint_symbol** | **str**| The waypoint symbol |
 
 ### Return type
 
@@ -250,8 +243,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -262,6 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_shipyard**
+>
 > GetShipyard200Response get_shipyard(system_symbol, waypoint_symbol)
 
 Get Shipyard
@@ -312,15 +306,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling SystemsApi->get_shipyard: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **system_symbol** | **str**| The system symbol | 
- **waypoint_symbol** | **str**| The waypoint symbol | 
+ **system_symbol** | **str**| The system symbol |
+ **waypoint_symbol** | **str**| The waypoint symbol |
 
 ### Return type
 
@@ -332,8 +323,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -344,6 +335,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_system**
+>
 > GetSystem200Response get_system(system_symbol)
 
 Get System
@@ -393,10 +385,7 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling SystemsApi->get_system: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -412,8 +401,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -424,6 +413,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_system_waypoints**
+>
 > GetSystemWaypoints200Response get_system_waypoints(system_symbol, page=page, limit=limit, type=type, traits=traits)
 
 List Waypoints in System
@@ -478,18 +468,15 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling SystemsApi->get_system_waypoints: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **system_symbol** | **str**| The system symbol | 
+ **system_symbol** | **str**| The system symbol |
  **page** | **int**| What entry offset to request | [optional] [default to 1]
  **limit** | **int**| How many entries to return per page | [optional] [default to 10]
- **type** | [**WaypointType**](.md)| Filter waypoints by type. | [optional] 
- **traits** | [**GetSystemWaypointsTraitsParameter**](.md)| Filter waypoints by one or more traits. | [optional] 
+ **type** | [**WaypointType**](.md)| Filter waypoints by type. | [optional]
+ **traits** | [**GetSystemWaypointsTraitsParameter**](.md)| Filter waypoints by one or more traits. | [optional]
 
 ### Return type
 
@@ -501,8 +488,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -513,6 +500,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_systems**
+>
 > GetSystems200Response get_systems(page=page, limit=limit)
 
 List Systems
@@ -563,10 +551,7 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling SystemsApi->get_systems: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -583,8 +568,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -595,6 +580,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_waypoint**
+>
 > GetWaypoint200Response get_waypoint(system_symbol, waypoint_symbol)
 
 Get Waypoint
@@ -645,15 +631,12 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling SystemsApi->get_waypoint: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **system_symbol** | **str**| The system symbol | 
- **waypoint_symbol** | **str**| The waypoint symbol | 
+ **system_symbol** | **str**| The system symbol |
+ **waypoint_symbol** | **str**| The waypoint symbol |
 
 ### Return type
 
@@ -665,8 +648,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -677,6 +660,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **supply_construction**
+>
 > SupplyConstruction201Response supply_construction(system_symbol, waypoint_symbol, supply_construction_request=supply_construction_request)
 
 Supply Construction Site
@@ -729,16 +713,13 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling SystemsApi->supply_construction: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **system_symbol** | **str**| The system symbol | 
- **waypoint_symbol** | **str**| The waypoint symbol | 
- **supply_construction_request** | [**SupplyConstructionRequest**](SupplyConstructionRequest.md)|  | [optional] 
+ **system_symbol** | **str**| The system symbol |
+ **waypoint_symbol** | **str**| The waypoint symbol |
+ **supply_construction_request** | [**SupplyConstructionRequest**](SupplyConstructionRequest.md)|  | [optional]
 
 ### Return type
 
@@ -750,8 +731,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+* **Content-Type**: application/json
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -760,4 +741,3 @@ Name | Type | Description  | Notes
 **201** | Successfully supplied construction site. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

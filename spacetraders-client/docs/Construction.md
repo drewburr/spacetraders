@@ -6,9 +6,9 @@ The construction details of a waypoint.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **str** | The symbol of the waypoint. | 
-**materials** | [**List[ConstructionMaterial]**](ConstructionMaterial.md) | The materials required to construct the waypoint. | 
-**is_complete** | **bool** | Whether the waypoint has been constructed. | 
+**symbol** | **str** | The symbol of the waypoint. |
+**materials** | [**List[ConstructionMaterial]**](ConstructionMaterial.md) | The materials required to construct the waypoint. |
+**is_complete** | **bool** | Whether the waypoint has been constructed. |
 
 ## Example
 
@@ -27,6 +27,5 @@ construction_dict = construction_instance.to_dict()
 # create an instance of Construction from a dict
 construction_form_dict = construction.from_dict(construction_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

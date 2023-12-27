@@ -1,12 +1,11 @@
 # GetStatus200ResponseLinksInner
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | 
-**url** | **str** |  | 
+**name** | **str** |  |
+**url** | **str** |  |
 
 ## Example
 
@@ -25,6 +24,5 @@ get_status200_response_links_inner_dict = get_status200_response_links_inner_ins
 # create an instance of GetStatus200ResponseLinksInner from a dict
 get_status200_response_links_inner_form_dict = get_status200_response_links_inner.from_dict(get_status200_response_links_inner_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

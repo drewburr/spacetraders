@@ -3,7 +3,7 @@
 """
     SpaceTraders API
 
-    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.   
+    SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.  The API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.  ```json http {   \"method\": \"GET\",   \"url\": \"https://api.spacetraders.io/v2\", } ```  Unlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.  We have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.
 
     The version of the OpenAPI document: 2.0.0
     Contact: joel@spacetraders.io
@@ -18,6 +18,7 @@ import datetime
 
 from client.models.refuel_ship200_response_data import RefuelShip200ResponseData
 
+
 class TestRefuelShip200ResponseData(unittest.TestCase):
     """RefuelShip200ResponseData unit test stubs"""
 
@@ -29,60 +30,60 @@ class TestRefuelShip200ResponseData(unittest.TestCase):
 
     def make_instance(self, include_optional) -> RefuelShip200ResponseData:
         """Test RefuelShip200ResponseData
-            include_option is a boolean, when False only required
-            params are included, when True both required and
-            optional params are included """
+        include_option is a boolean, when False only required
+        params are included, when True both required and
+        optional params are included"""
         # uncomment below to create an instance of `RefuelShip200ResponseData`
         """
         model = RefuelShip200ResponseData()
         if include_optional:
             return RefuelShip200ResponseData(
                 agent = client.models.agent.Agent(
-                    account_id = '0', 
-                    symbol = '012', 
-                    headquarters = '0', 
-                    credits = 56, 
-                    starting_faction = '0', 
+                    account_id = '0',
+                    symbol = '012',
+                    headquarters = '0',
+                    credits = 56,
+                    starting_faction = '0',
                     ship_count = 56, ),
                 fuel = client.models.ship_fuel.ShipFuel(
-                    current = 0, 
-                    capacity = 0, 
+                    current = 0,
+                    capacity = 0,
                     consumed = client.models.ship_fuel_consumed.ShipFuel_consumed(
-                        amount = 0, 
+                        amount = 0,
                         timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), ),
                 transaction = client.models.market_transaction.MarketTransaction(
-                    waypoint_symbol = '0', 
-                    ship_symbol = '', 
-                    trade_symbol = '', 
-                    type = 'PURCHASE', 
-                    units = 0, 
-                    price_per_unit = 0, 
-                    total_price = 0, 
+                    waypoint_symbol = '0',
+                    ship_symbol = '',
+                    trade_symbol = '',
+                    type = 'PURCHASE',
+                    units = 0,
+                    price_per_unit = 0,
+                    total_price = 0,
                     timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
             )
         else:
             return RefuelShip200ResponseData(
                 agent = client.models.agent.Agent(
-                    account_id = '0', 
-                    symbol = '012', 
-                    headquarters = '0', 
-                    credits = 56, 
-                    starting_faction = '0', 
+                    account_id = '0',
+                    symbol = '012',
+                    headquarters = '0',
+                    credits = 56,
+                    starting_faction = '0',
                     ship_count = 56, ),
                 fuel = client.models.ship_fuel.ShipFuel(
-                    current = 0, 
-                    capacity = 0, 
+                    current = 0,
+                    capacity = 0,
                     consumed = client.models.ship_fuel_consumed.ShipFuel_consumed(
-                        amount = 0, 
+                        amount = 0,
                         timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), ),
                 transaction = client.models.market_transaction.MarketTransaction(
-                    waypoint_symbol = '0', 
-                    ship_symbol = '', 
-                    trade_symbol = '', 
-                    type = 'PURCHASE', 
-                    units = 0, 
-                    price_per_unit = 0, 
-                    total_price = 0, 
+                    waypoint_symbol = '0',
+                    ship_symbol = '',
+                    trade_symbol = '',
+                    type = 'PURCHASE',
+                    units = 0,
+                    price_per_unit = 0,
+                    total_price = 0,
                     timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ),
         )
         """
@@ -92,5 +93,6 @@ class TestRefuelShip200ResponseData(unittest.TestCase):
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

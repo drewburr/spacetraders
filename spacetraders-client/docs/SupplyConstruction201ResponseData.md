@@ -1,12 +1,11 @@
 # SupplyConstruction201ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**construction** | [**Construction**](Construction.md) |  | 
-**cargo** | [**ShipCargo**](ShipCargo.md) |  | 
+**construction** | [**Construction**](Construction.md) |  |
+**cargo** | [**ShipCargo**](ShipCargo.md) |  |
 
 ## Example
 
@@ -25,6 +24,5 @@ supply_construction201_response_data_dict = supply_construction201_response_data
 # create an instance of SupplyConstruction201ResponseData from a dict
 supply_construction201_response_data_form_dict = supply_construction201_response_data.from_dict(supply_construction201_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

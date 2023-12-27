@@ -1,12 +1,10 @@
 # OrbitShip200Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**OrbitShip200ResponseData**](OrbitShip200ResponseData.md) |  | 
+**data** | [**OrbitShip200ResponseData**](OrbitShip200ResponseData.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ orbit_ship200_response_dict = orbit_ship200_response_instance.to_dict()
 # create an instance of OrbitShip200Response from a dict
 orbit_ship200_response_form_dict = orbit_ship200_response.from_dict(orbit_ship200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

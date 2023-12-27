@@ -1,12 +1,10 @@
 # NegotiateContract200Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**NegotiateContract200ResponseData**](NegotiateContract200ResponseData.md) |  | 
+**data** | [**NegotiateContract200ResponseData**](NegotiateContract200ResponseData.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ negotiate_contract200_response_dict = negotiate_contract200_response_instance.to
 # create an instance of NegotiateContract200Response from a dict
 negotiate_contract200_response_form_dict = negotiate_contract200_response.from_dict(negotiate_contract200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

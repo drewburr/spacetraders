@@ -1,13 +1,12 @@
 # RefuelShip200ResponseData
 
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**agent** | [**Agent**](Agent.md) |  | 
-**fuel** | [**ShipFuel**](ShipFuel.md) |  | 
-**transaction** | [**MarketTransaction**](MarketTransaction.md) |  | 
+**agent** | [**Agent**](Agent.md) |  |
+**fuel** | [**ShipFuel**](ShipFuel.md) |  |
+**transaction** | [**MarketTransaction**](MarketTransaction.md) |  |
 
 ## Example
 
@@ -26,6 +25,5 @@ refuel_ship200_response_data_dict = refuel_ship200_response_data_instance.to_dic
 # create an instance of RefuelShip200ResponseData from a dict
 refuel_ship200_response_data_form_dict = refuel_ship200_response_data.from_dict(refuel_ship200_response_data_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

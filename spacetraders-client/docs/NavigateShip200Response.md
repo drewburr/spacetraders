@@ -1,12 +1,10 @@
 # NavigateShip200Response
 
-
-
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**NavigateShip200ResponseData**](NavigateShip200ResponseData.md) |  | 
+**data** | [**NavigateShip200ResponseData**](NavigateShip200ResponseData.md) |  |
 
 ## Example
 
@@ -25,6 +23,5 @@ navigate_ship200_response_dict = navigate_ship200_response_instance.to_dict()
 # create an instance of NavigateShip200Response from a dict
 navigate_ship200_response_form_dict = navigate_ship200_response.from_dict(navigate_ship200_response_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
