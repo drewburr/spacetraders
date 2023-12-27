@@ -1,6 +1,6 @@
 # client.AgentsApi
 
-All URIs are relative to *https://api.spacetraders.io/v2*
+All URIs are relative to *<https://api.spacetraders.io/v2>*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**get_agents**](AgentsApi.md#get_agents) | **GET** /agents | List Agents
 [**get_my_agent**](AgentsApi.md#get_my_agent) | **GET** /my/agent | Get Agent
 
-
 # **get_agent**
+>
 > GetMyAgent200Response get_agent(agent_symbol)
 
 Get Public Agent
@@ -59,10 +59,7 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling AgentsApi->get_agent: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -78,8 +75,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -90,6 +87,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_agents**
+>
 > GetAgents200Response get_agents(page=page, limit=limit)
 
 List Agents
@@ -140,10 +138,7 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling AgentsApi->get_agents: %s\n" % e)
 ```
 
-
-
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -160,8 +155,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -172,6 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_my_agent**
+>
 > GetMyAgent200Response get_my_agent()
 
 Get Agent
@@ -220,8 +216,6 @@ with client.ApiClient(configuration) as api_client:
         print("Exception when calling AgentsApi->get_my_agent: %s\n" % e)
 ```
 
-
-
 ### Parameters
 
 This endpoint does not need any parameter.
@@ -236,8 +230,8 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+* **Content-Type**: Not defined
+* **Accept**: application/json
 
 ### HTTP response details
 
@@ -246,4 +240,3 @@ This endpoint does not need any parameter.
 **200** | Successfully fetched agent details. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
