@@ -1,32 +1,19 @@
-import os
-from dotenv import load_dotenv
-import client
+from spacetraders.models import GetMyAgentResponse200
+from spacetraders.types import Response
+from spacetraders import AuthenticatedClient
 
-load_dotenv()
+from utils.auth import Auth
+# from contracts import ContractController
 
 
 def main():
-    AGENT_CALLSIGN = os.getenv("AGENT_CALLSIGN")
-    setup_configuration()
+    Auth.load()
 
-    api_client = None  # client.ApiClient()
-    agent_api = client.AgentsApi(api_client)
+    client: AuthenticatedClient = Auth.client
 
-    print(agent_api.get_agent(agent_symbol=AGENT_CALLSIGN))
+    response: Response[GetMyAgentResponse200] = client.agents.get_my_agent()
 
-    for agent in agent_api.get_agents().data:
-        print(agent)
-
-    print(agent_api.get_my_agent())
-
-
-def setup_configuration():
-    config_kwargs = {
-        "access_token": os.getenv("CLIENT_TOKEN"),
-        "username": os.getenv("AGENT_CALLSIGN"),
-    }
-
-    client.Configuration._default = client.Configuration(**config_kwargs)
+    print(response)
 
 
 if __name__ == "__main__":
