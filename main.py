@@ -3,7 +3,7 @@ from spacetraders.types import Response
 from spacetraders import AuthenticatedClient
 
 from utils.auth import Auth
-# from contracts import ContractController
+from contracts import ContractController
 
 
 def main():

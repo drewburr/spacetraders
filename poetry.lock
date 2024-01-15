@@ -517,7 +517,7 @@ files = [
 
 [[package]]
 name = "spacetraders"
-version = "0.10.0"
+version = "0.11.0-rc5"
 description = "Python API for Space Traders"
 optional = false
 python-versions = "^3.11"
@@ -548,4 +548,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "e560eefd336e2f020dc27685b055459e172623fad555de9f0590c5a4b7eae455"
+content-hash = "578153dd488aaf65356c395897a2857d035baa61644df6d3495747165ea8decb"

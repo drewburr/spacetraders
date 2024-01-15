@@ -1,9 +1,10 @@
-from client import ContractsApi
+from spacetraders.api.contracts import get_contracts
 
 class ContractController():
-    contracts = ContractsApi()
+    def __init__(self, client):
+        self.client = client
 
     def find(self):
-        available = self.contracts.get_contracts().data
+        available = get_contracts.sync_detailed
         print(available)
         return available
