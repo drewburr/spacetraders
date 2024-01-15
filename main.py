@@ -1,17 +1,18 @@
 from spacetraders.models import GetMyAgentResponse200
 from spacetraders.types import Response
-from spacetraders import AuthenticatedClient
+from spacetraders.api import API as API
+# from spacetraders import AuthenticatedClient
 
 from utils.auth import Auth
-from contracts import ContractController
+# from contracts import ContractController
 
 
 def main():
     Auth.load()
 
-    client: AuthenticatedClient = Auth.client
+    client = Auth.client
 
-    response: Response[GetMyAgentResponse200] = client.agents.get_my_agent()
+    response = API.get_agent(Auth.agent_callsign, client=client)
 
     print(response)
 
