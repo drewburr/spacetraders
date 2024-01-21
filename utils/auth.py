@@ -1,7 +1,6 @@
 import os
-from spacetraders import AuthenticatedClient
 from dotenv import load_dotenv
-
+from spacetraders import AuthenticatedClient
 
 class Auth:
     """
