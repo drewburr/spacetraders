@@ -8,7 +8,7 @@ from utils import Auth
 
 
 
-from my_agent import MyAgent
+from client.agents import MyAgent
 
 
 def main():
@@ -16,18 +16,12 @@ def main():
 
     client = Auth.client
 
-    response = API.get_my_agent.sync(client=client)
+    agent = MyAgent(client)
 
-    my_agent = response.data
-    # response = API.get_agent(Auth.agent_callsign, client=client)
 
-    print(my_agent)
+    print(agent.waypoint.data)
 
-    my_agent2 = MyAgent(client)
-
-    print(my_agent2)
-
-    print(my_agent2.waypoint.data)
+    print(agent.system)
 
 if __name__ == "__main__":
     main()

@@ -1,12 +1,15 @@
 from spacetraders.api import API
-from spacetraders.models import Agent
+from spacetraders.models import Agent as STAgent
 from spacetraders import AuthenticatedClient
 
 from attrs import field, define as _attrs_define
 
+from ..fleet import Fleet
+from ..systems import System
 
-@_attrs_define(match_args=False)
-class MyAgent(Agent):
+
+@_attrs_define()
+class MyAgent(STAgent):
     client: AuthenticatedClient = field(default=None, repr=False)
     headquarters_symbol: str = field(default=None)
 
@@ -26,3 +29,13 @@ class MyAgent(Agent):
         return API.get_waypoint.sync(
             self.headquarters_symbol, self.headquarters, client=self.client
         )
+
+    @property
+    def fleet(self):
+        return Fleet(self.client)
+
+    @property
+    def system(self):
+        return System(self.client, self.headquarters_symbol)
+
+__all__ = "MyAgent"
